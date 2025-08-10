@@ -1,0 +1,8 @@
+ELIGIBILITY AND SELECTION POLICY
+Admissions Committee | Effective for Summer 2026
+
+Applicants must be enrolled in a master's degree at an accredited university throughout the application period. Eligible fields include computer science, data science, statistics, electrical engineering, computational linguistics, information systems, and a related quantitative discipline approved by the committee. Undergraduate and doctoral students are not eligible for this master's internship track.
+
+Before the internship begins, an applicant must have completed one graduate machine-learning course or demonstrate equivalent research experience. Working knowledge of Python is required. Prior publication, prior RAG experience, and a Graduate Record Examination (GRE) score are not required.
+
+Selection uses four equally disclosed factors: research-statement quality, evidence of technical preparation, alignment with an available mentor, and interview performance. Two reviewers independently score each application. A third reviewer adjudicates a difference greater than 20 points on the 100-point rubric. Applicants may request an accessibility accommodation without disclosing medical details to reviewers.

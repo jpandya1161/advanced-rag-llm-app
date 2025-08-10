@@ -1,0 +1,8 @@
+COMPUTE, STORAGE, AND LAB ACCESS GUIDE
+Research Computing | Summer allocation 2026
+
+Each internship team receives 80 A100 GPU-hours per week in the shared research cluster and 200 GB of encrypted project storage. Unused GPU-hours do not roll over. A mentor may request a temporary quota increase through the computing portal at least three working days before the need. Jobs exceeding four GPU-hours must use checkpointing.
+
+Cluster access requires university single sign-on, multifactor authentication, and completion of the secure-computing induction. Interns may access the lab from 08:00 to 20:00 on working days using their university card. After-hours physical access requires a staff sponsor and campus-security approval.
+
+Project data belongs in the allocated encrypted volume, not home directories or personal cloud drives. Storage is read-only seven days after the final demonstration and is deleted 90 days later unless the mentor submits an archival request. General technical support is available through research-compute@university.example.

@@ -1,0 +1,8 @@
+MILESTONES AND ASSESSMENT STANDARD
+Academic Committee | Summer 2026
+
+The project charter is due Friday, 5 June. The literature review is due 19 June. The data-management and ethics plan is due 26 June. A working prototype and design review are due 17 July. The frozen evaluation package, including test questions and baseline outputs, is due 7 August. The final written report and reproducibility appendix are due Monday, 17 August. The poster, repository release, and live demonstration are due Friday, 21 August.
+
+In addition to those formal milestones, every intern posts a weekly progress report by 17:00 IST each Friday. The weekly report is a short status update and is distinct from the final written report. If a question refers only to "the report," staff should clarify whether it means a weekly progress report or the final written report.
+
+Assessment weights are: research framing 20 percent, technical implementation 25 percent, evaluation quality 25 percent, reproducibility 15 percent, and communication 15 percent. A mentor and an independent reviewer score the work. Passing requires an overall score of at least 60 percent and no finding of serious ethics or security non-compliance.
