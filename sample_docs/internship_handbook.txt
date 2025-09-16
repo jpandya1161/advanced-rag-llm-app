@@ -1,0 +1,10 @@
+UNIVERSITY AI RESEARCH INTERNSHIP HANDBOOK
+Academic Year 2026-2027 | Policy version 3.2 | Effective 1 April 2026
+
+The University AI Research Internship is a twelve-week summer research programme for master's students. The programme runs from Monday, 1 June 2026 through Friday, 21 August 2026. A remote orientation is held on Friday, 29 May 2026. Interns are expected to work 35 hours each week. Collaboration hours are 10:00 to 15:00 India Standard Time on working days; the remaining hours may be arranged with the mentor.
+
+Each intern joins one research lab and completes a scoped AI research project. The required outputs are a project charter, literature review, data-management plan, working prototype, evaluation package, final report, poster, source-code repository, and final demonstration. Details and due dates are maintained in the Milestones and Assessment Standard.
+
+Policy precedence: this handbook and the specialist policies dated 2026 are current. A specialist policy controls its subject, such as security or research ethics. Documents clearly labelled archived, draft, or 2025 FAQ are historical references and do not set current requirements. When two current specialist policies apply, the intern must satisfy both and ask the programme lead if the requirements cannot be reconciled.
+
+The internship is educational employment, not a degree programme. Completion requires attendance, timely deliverables, compliance with research ethics and information-security rules, and a satisfactory final review. Administrative questions go to ai-internships@university.example.

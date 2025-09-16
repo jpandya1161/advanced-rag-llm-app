@@ -1,0 +1,8 @@
+RESEARCH PRIMER: RETRIEVAL-AUGMENTED GENERATION
+AI Systems Lab teaching note | Revised March 2026
+
+Retrieval-Augmented Generation, or RAG, combines document retrieval with language-model generation. A typical pipeline parses source documents, divides them into chunks, creates embeddings, retrieves evidence for a question, builds a context-constrained prompt, and generates an answer with citations. Retrieval grounds the model in the indexed corpus rather than relying only on model memory.
+
+Vector retrieval can match related wording but may miss exact identifiers. Keyword retrieval is strong for exact names, codes, and uncommon terms but is weaker when users paraphrase. Hybrid retrieval combines both signals and is often more robust. Reranking can improve the initial candidate list at additional latency and cost.
+
+Chunking creates a precision-context trade-off: very small chunks lose surrounding meaning, while very large chunks can contain several unrelated topics. Evaluation must therefore inspect retrieval quality and final-answer quality independently. Useful failure categories include missing evidence, near-duplicate policies, outdated documents, ambiguous questions, conflicting sources, unsupported synthesis, and incorrect citations.
