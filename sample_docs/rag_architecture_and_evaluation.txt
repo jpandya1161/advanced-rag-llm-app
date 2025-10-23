@@ -1,0 +1,10 @@
+RAG PLATFORM AND EVALUATION STANDARD
+Version 2.1 | AI Systems Lab | 10 April 2026
+
+Every knowledge-assistant project must report three retrieval baselines: vector-only retrieval, keyword-only BM25 retrieval, and hybrid retrieval. Hybrid retrieval combines vector and keyword ranks using reciprocal-rank fusion. Teams may add reranking or query rewriting, but those results must be reported separately from the three required baselines.
+
+The fixed evaluation set contains 40 queries and must include answerable, ambiguous, conflicting, and unanswerable cases. Retrieval reporting must include source-level Recall@5, mean reciprocal rank (MRR), and normalized discounted cumulative gain (nDCG@5). Answer evaluation must report required-fact recall, citation support, refusal accuracy for unanswerable queries, latency, and a qualitative error analysis. A system should not receive credit for citing a source that does not support its claim.
+
+For repeatability, teams must record the corpus version, chunk size, chunk overlap, embedding configuration, top-k value, and random seed. The official baseline uses chunk size 900 characters, overlap 160 characters, top-k 5, embedding dimension 384, and seed 42 for any stochastic extension. Raw per-query results must be retained alongside summary metrics.
+
+The assistant must fail closed when evidence is absent. Ambiguous questions should prompt clarification or present the relevant interpretations. Conflicting evidence should be surfaced and resolved using document status, effective date, and the handbook's policy-precedence rule rather than silently selecting a convenient statement.

@@ -1,0 +1,8 @@
+INFORMATION SECURITY AND EXTERNAL LLM USE
+Information Security Office | Standard ISO-AI-14 | Effective 15 March 2026
+
+API keys, access tokens, passwords, and private endpoints must be stored in the university secrets vault or approved environment variables. They must never be committed to source control, placed in notebooks, included in prompts, or pasted into chat channels. Restricted or identifiable data must not be copied to personal devices.
+
+External LLM APIs may process public data and university-approved de-identified data. Sending confidential university information, identifiable participant data, unpublished sponsor data, credentials, or student records to an external LLM requires a written data-processing approval from Information Security and the data owner. Prompt and response logs for approved external-LLM experiments are retained for 30 days, then deleted unless an incident hold applies.
+
+A lost credential, suspected account compromise, unauthorized data transfer, or exposed repository secret must be reported to the Security Operations Centre within two hours of discovery. If people or research consent are affected, the separate 24-hour ethics report is also required. Rotate exposed credentials immediately, preserve relevant logs, and do not investigate by accessing another person's account.

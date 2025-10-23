@@ -1,0 +1,8 @@
+RESEARCH ETHICS AND DATA GOVERNANCE
+University Research Ethics Board | REB-AI-2026-07
+
+Research involving identifiable human participants, private human communications, biometric data, or intervention with users requires written ethics approval before recruitment, collection, or analysis begins. Mentor approval alone is insufficient. Public, fully anonymized benchmark datasets generally do not require a new ethics review, but the team must document the dataset licence, provenance, intended use, known limitations, and a data sheet.
+
+Interns must not scrape private student records, reuse participant data beyond the consented purpose, or attempt to re-identify anonymized records. Consent materials must state whether an external model provider will process data. Identifiable research data must stay in approved encrypted storage; access is limited to named project members and reviewed monthly.
+
+A suspected consent breach, unintended disclosure of participant information, or other research-ethics incident must be reported to the mentor and Research Ethics Office within 24 hours of discovery. This ethics deadline does not replace the shorter information-security notification deadline when a security incident is also involved. Research data is deleted or archived according to the approved data-management plan, normally no later than twelve months after project closure.

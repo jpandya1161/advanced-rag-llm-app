@@ -1,0 +1,8 @@
+PUBLICATION, INTELLECTUAL PROPERTY, AND OPEN SOURCE
+Research Office | Guidance RO-AI-9 | Revised April 2026
+
+Interns retain ownership of code, writing, and inventions they created before the programme. New project outputs are governed by university IP policy and any disclosed sponsor agreement. Inventorship follows applicable patent law and is not determined by job title. Authorship follows documented scholarly contribution using the CRediT taxonomy; providing supervision or funding alone does not guarantee authorship.
+
+A manuscript, poster for an external event, public dataset, model checkpoint, or public technical report must receive an internal disclosure review before submission or release. The Research Office has ten business days to complete that review. This review checks confidential information, participant consent, sponsor obligations, export controls, and possible patent filing; it is not permission to manipulate or suppress negative results.
+
+Unless a sponsor restriction or data licence prevents it, internship source code should be released under the Apache License 2.0 after the internal review. Third-party dependencies and datasets retain their own licences. The repository must include a licence file, dependency notice, model or data card where applicable, and instructions sufficient to reproduce the reported baseline.
