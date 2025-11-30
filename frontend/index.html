@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#101827" />
+    <title>Knowledge Assistant | Advanced RAG</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Corpus controls">
+        <div class="brand">
+          <div class="brand-mark" aria-hidden="true"><i data-lucide="orbit"></i></div>
+          <div>
+            <p class="eyebrow">Research workspace</p>
+            <h1>Knowledge Assistant</h1>
+          </div>
+        </div>
+
+        <section class="sidebar-section corpus-section" aria-labelledby="corpus-heading">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Knowledge base</p>
+              <h2 id="corpus-heading">Corpus</h2>
+            </div>
+            <span id="healthBadge" class="status-pill"><span class="status-dot"></span>checking</span>
+          </div>
+
+          <label class="file-drop" for="documentInput">
+            <input id="documentInput" type="file" accept=".txt,.md,.markdown,.csv,.json,.html,.pdf" />
+            <span class="file-drop-icon" aria-hidden="true"><i data-lucide="file-up"></i></span>
+            <span class="file-drop-copy">
+              <strong>Select a source file</strong>
+              <small>Text, markdown, JSON, CSV, HTML, or PDF</small>
+            </span>
+          </label>
+
+          <div class="action-grid">
+            <button id="uploadButton" class="button-primary" type="button">
+              <i data-lucide="upload"></i><span>Upload</span>
+            </button>
+            <button id="sampleButton" class="button-secondary" type="button">
+              <i data-lucide="library-big"></i><span>Load samples</span>
+            </button>
+          </div>
+          <button id="clearButton" class="button-quiet danger-action" type="button">
+            <i data-lucide="trash-2"></i><span>Clear index</span>
+          </button>
+        </section>
+
+        <section class="sidebar-section document-section" aria-labelledby="documents-heading">
+          <div class="section-heading compact">
+            <div>
+              <p class="eyebrow">Indexed material</p>
+              <h2 id="documents-heading">Documents</h2>
+            </div>
+            <span id="documentCount" class="count-chip">0</span>
+          </div>
+          <div id="documentsList" class="document-list" aria-live="polite"></div>
+        </section>
+      </aside>
+
+      <main class="workspace">
+        <header class="topbar">
+          <div class="workspace-title">
+            <p class="eyebrow">Grounded question answering</p>
+            <h2>Evidence workspace</h2>
+          </div>
+          <div class="workspace-status" aria-label="System status">
+            <span id="providerBadge" class="provider-pill"><i data-lucide="bot"></i>offline</span>
+            <span id="stats" class="stats-pill">0 documents · 0 chunks</span>
+          </div>
+        </header>
+
+        <section class="workspace-intro" aria-label="How the assistant works">
+          <div class="intro-copy">
+            <p class="eyebrow">Grounded responses</p>
+            <h3>Ask questions against your indexed research material.</h3>
+            <p>Each response is paired with ranked source passages so you can inspect the evidence behind it.</p>
+          </div>
+          <div class="signal-row" aria-label="System capabilities">
+            <span><i data-lucide="database"></i>Persistent corpus</span>
+            <span><i data-lucide="search-check"></i>Hybrid retrieval</span>
+            <span><i data-lucide="quote"></i>Source citations</span>
+          </div>
+        </section>
+
+        <section id="chatLog" class="chat-log" aria-live="polite">
+          <article class="message assistant">
+            <div class="message-meta"><span class="assistant-avatar"><i data-lucide="sparkles"></i></span><span>Knowledge Assistant</span></div>
+            <p>Start by loading the sample corpus or uploading a document. I will answer from retrieved evidence and show the source passages used.</p>
+          </article>
+        </section>
+
+        <form id="askForm" class="ask-form">
+          <label class="question-field" for="questionInput">
+            <i data-lucide="message-square-text" aria-hidden="true"></i>
+            <input
+              id="questionInput"
+              type="text"
+              autocomplete="off"
+              placeholder="Ask: What should the assistant do when evidence is missing?"
+              required
+            />
+          </label>
+          <button class="button-primary ask-button" type="submit"><span>Ask</span><i data-lucide="arrow-up-right"></i></button>
+        </form>
+      </main>
+
+      <aside class="inspector" aria-label="Evidence inspector">
+        <section class="inspector-section sources-section" aria-labelledby="sources-heading">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Retrieval trace</p>
+              <h2 id="sources-heading">Source inspector</h2>
+            </div>
+            <span id="latencyBadge" class="latency-pill">idle</span>
+          </div>
+          <div id="sourcesList" class="sources-list">
+            <div class="empty-state">
+              <span class="empty-icon"><i data-lucide="scan-search"></i></span>
+              <p>Retrieved evidence will appear here after an answer.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="inspector-section evaluation-section" aria-labelledby="evaluation-heading">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Quality check</p>
+              <h2 id="evaluation-heading">Evaluation</h2>
+            </div>
+          </div>
+          <p class="evaluation-copy">Run the labeled sample set to review fact coverage, citation behavior, and local latency.</p>
+          <button id="evalButton" class="button-secondary evaluation-button" type="button">
+            <i data-lucide="chart-no-axes-combined"></i><span>Run sample evaluation</span>
+          </button>
+          <pre id="evalOutput" class="metric-output">No evaluation run yet.</pre>
+        </section>
+      </aside>
+    </div>
+
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+    <script src="/static/app.js"></script>
+  </body>
+</html>
