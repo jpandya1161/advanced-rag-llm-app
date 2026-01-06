@@ -1,0 +1,598 @@
+{
+  "cases": 41,
+  "fact_scored_cases": 36,
+  "average_fact_recall": 0.8241,
+  "citation_or_refusal_rate": 1.0,
+  "unanswerable_refusal_accuracy": 0.8,
+  "answerable_non_refusal_rate": 1.0,
+  "average_latency_ms": 4.8578,
+  "results": [
+    {
+      "id": "policy-001",
+      "scenario": "answerable",
+      "question": "What are the official start and end dates for the 2026 internship?",
+      "fact_recall": 1.0,
+      "matched_facts": [
+        "1 june 2026",
+        "21 august 2026"
+      ],
+      "citation_present_or_refused": true,
+      "expected_refusal": false,
+      "refusal_correct": true,
+      "refused": false,
+      "latency_ms": 5.21
+    },
+    {
+      "id": "policy-002",
+      "scenario": "answerable",
+      "question": "When and how is orientation held?",
+      "fact_recall": 1.0,
+      "matched_facts": [
+        "remote orientation",
+        "29 may 2026"
+      ],
+      "citation_present_or_refused": true,
+      "expected_refusal": false,
+      "refusal_correct": true,
+      "refused": false,
+      "latency_ms": 4.48
+    },
+    {
+      "id": "policy-003",
+      "scenario": "answerable",
+      "question": "How many hours must an intern work, and what are the core collaboration hours?",
+      "fact_recall": 1.0,
+      "matched_facts": [
+        "35 hours",
+        "10:00 to 15:00 ist"
+      ],
+      "citation_present_or_refused": true,
+      "expected_refusal": false,
+      "refusal_correct": true,
+      "refused": false,
+      "latency_ms": 4.59
+    },
+    {
+      "id": "eligibility-001",
+      "scenario": "answerable",
+      "question": "Can a currently enrolled master's student in statistics apply?",
+      "fact_recall": 0.5,
+      "matched_facts": [
+        "master's degree"
+      ],
+      "citation_present_or_refused": true,
+      "expected_refusal": false,
+      "refusal_correct": true,
+      "refused": false,
+      "latency_ms": 4.92
+    },
+    {
+      "id": "eligibility-002",
+      "scenario": "answerable",
+      "question": "Are undergraduate or doctoral students eligible for this internship track?",
+      "fact_recall": 1.0,
+      "matched_facts": [
+        "undergraduate and doctoral students are not eligible"
+      ],
+      "citation_present_or_refused": true,
+      "expected_refusal": false,
+      "refusal_correct": true,
+      "refused": false,
+      "latency_ms": 7.24
+    },
+    {
+      "id": "eligibility-003",
+      "scenario": "answerable",
+      "question": "Is a GRE score or previous publication required?",
+      "fact_recall": 1.0,
+      "matched_facts": [
+        "gre score not required",
+        "prior publication not required"
+      ],
+      "citation_present_or_refused": true,
+      "expected_refusal": false,
+      "refusal_correct": true,
+      "refused": false,
+      "latency_ms": 4.61
+    },
+    {
+      "id": "funding-001",
+      "scenario": "answerable",
+      "question": "What is the monthly stipend for a full-time 2026 intern?",
+      "fact_recall": 1.0,
+      "matched_facts": [
+        "inr 45,000 per month"
+      ],
+      "citation_present_or_refused": true,
+      "expected_refusal": false,
+      "refusal_correct": true,
+      "refused": false,
+      "latency_ms": 4.48
+    },
+    {
+      "id": "funding-002",
+      "scenario": "answerable",
+      "question": "How is the stipend paid?",
+      "fact_recall": 0.0,
+      "matched_facts": [],
+      "citation_present_or_refused": true,
+      "expected_refusal": false,
+      "refusal_correct": true,
+      "refused": false,
+      "latency_ms": 4.45
+    },
+    {
+      "id": "funding-003",
+      "scenario": "answerable",
+      "question": "What is the maximum reimbursement for pre-approved domestic travel?",
+      "fact_recall": 1.0,
+      "matched_facts": [
+        "inr 12,000",
+        "approved before booking"
+      ],
+      "citation_present_or_refused": true,
+      "expected_refusal": false,
+      "refusal_correct": true,
+      "refused": false,
+      "latency_ms": 4.65
+    },
+    {
+      "id": "funding-004",
+      "scenario": "answerable",
+      "question": "Does the internship stipend include housing and meals?",
+      "fact_recall": 1.0,
+      "matched_facts": [
+        "housing and meals are not included"
+      ],
+      "citation_present_or_refused": true,
+      "expected_refusal": false,
+      "refusal_correct": true,
+      "refused": false,
+      "latency_ms": 4.73
+    },
+    {
+      "id": "schedule-001",
+      "scenario": "answerable",
+      "question": "Which days must interns normally attend campus?",
+      "fact_recall": 1.0,
+      "matched_facts": [
+        "tuesday and thursday"
+      ],
+      "citation_present_or_refused": true,
+      "expected_refusal": false,
+      "refusal_correct": true,
+      "refused": false,
+      "latency_ms": 4.6
+    },
+    {
+      "id": "schedule-002",
+      "scenario": "answerable",
+      "question": "How many personal-leave days are available in Summer 2026?",
+      "fact_recall": 1.0,
+      "matched_facts": [
+        "two personal-leave days"
+      ],
+      "citation_present_or_refused": true,
+      "expected_refusal": false,
+      "refusal_correct": true,
+      "refused": false,
+      "latency_ms": 4.73
+    },
+    {
+      "id": "milestone-001",
+      "scenario": "answerable",
+      "question": "When is the project charter due?",
+      "fact_recall": 1.0,
+      "matched_facts": [
+        "5 june"
+      ],
+      "citation_present_or_refused": true,
+      "expected_refusal": false,
+      "refusal_correct": true,
+      "refused": false,
+      "latency_ms": 4.64
+    },
+    {
+      "id": "milestone-002",
+      "scenario": "answerable",
+      "question": "What must be submitted by 7 August?",
+      "fact_recall": 0.0,
+      "matched_facts": [],
+      "citation_present_or_refused": true,
+      "expected_refusal": false,
+      "refusal_correct": true,
+      "refused": false,
+      "latency_ms": 4.27
+    },
+    {
+      "id": "milestone-003",
+      "scenario": "answerable",
+      "question": "When are the final written report and reproducibility appendix due?",
+      "fact_recall": 1.0,
+      "matched_facts": [
+        "17 august",
+        "reproducibility appendix"
+      ],
+      "citation_present_or_refused": true,
+      "expected_refusal": false,
+      "refusal_correct": true,
+      "refused": false,
+      "latency_ms": 4.52
+    },
+    {
+      "id": "milestone-004",
+      "scenario": "answerable",
+      "question": "What is the deadline for the weekly progress update?",
+      "fact_recall": 0.0,
+      "matched_facts": [],
+      "citation_present_or_refused": true,
+      "expected_refusal": false,
+      "refusal_correct": true,
+      "refused": false,
+      "latency_ms": 4.79
+    },
+    {
+      "id": "ethics-001",
+      "scenario": "answerable",
+      "question": "Can a team begin analysing identifiable participant interviews after mentor approval but before ethics approval?",
+      "fact_recall": 1.0,
+      "matched_facts": [
+        "written ethics approval",
+        "before analysis",
+        "mentor approval alone is insufficient"
+      ],
+      "citation_present_or_refused": true,
+      "expected_refusal": false,
+      "refusal_correct": true,
+      "refused": false,
+      "latency_ms": 5.41
+    },
+    {
+      "id": "ethics-002",
+      "scenario": "answerable",
+      "question": "Does a public fully anonymized benchmark dataset always require a new ethics review?",
+      "fact_recall": 1.0,
+      "matched_facts": [
+        "generally do not require a new ethics review",
+        "licence",
+        "provenance",
+        "data sheet"
+      ],
+      "citation_present_or_refused": true,
+      "expected_refusal": false,
+      "refusal_correct": true,
+      "refused": false,
+      "latency_ms": 4.77
+    },
+    {
+      "id": "security-001",
+      "scenario": "answerable",
+      "question": "What kinds of data may be sent to an external LLM API without a special data-processing approval?",
+      "fact_recall": 0.5,
+      "matched_facts": [
+        "public data"
+      ],
+      "citation_present_or_refused": true,
+      "expected_refusal": false,
+      "refusal_correct": true,
+      "refused": false,
+      "latency_ms": 5.07
+    },
+    {
+      "id": "security-002",
+      "scenario": "answerable",
+      "question": "Where should API keys and access tokens be stored?",
+      "fact_recall": 1.0,
+      "matched_facts": [
+        "secrets vault",
+        "approved environment variables"
+      ],
+      "citation_present_or_refused": true,
+      "expected_refusal": false,
+      "refusal_correct": true,
+      "refused": false,
+      "latency_ms": 4.63
+    },
+    {
+      "id": "security-003",
+      "scenario": "answerable",
+      "question": "How quickly must an exposed repository secret be reported?",
+      "fact_recall": 1.0,
+      "matched_facts": [
+        "within two hours",
+        "security operations centre"
+      ],
+      "citation_present_or_refused": true,
+      "expected_refusal": false,
+      "refusal_correct": true,
+      "refused": false,
+      "latency_ms": 4.89
+    },
+    {
+      "id": "compute-001",
+      "scenario": "answerable",
+      "question": "What weekly GPU allocation does each internship team receive?",
+      "fact_recall": 1.0,
+      "matched_facts": [
+        "80 a100 gpu-hours per week"
+      ],
+      "citation_present_or_refused": true,
+      "expected_refusal": false,
+      "refusal_correct": true,
+      "refused": false,
+      "latency_ms": 5.19
+    },
+    {
+      "id": "compute-002",
+      "scenario": "answerable",
+      "question": "How much encrypted project storage is allocated to a team?",
+      "fact_recall": 1.0,
+      "matched_facts": [
+        "200 gb",
+        "encrypted project storage"
+      ],
+      "citation_present_or_refused": true,
+      "expected_refusal": false,
+      "refusal_correct": true,
+      "refused": false,
+      "latency_ms": 4.4
+    },
+    {
+      "id": "publication-001",
+      "scenario": "answerable",
+      "question": "How long does the Research Office have for internal disclosure review?",
+      "fact_recall": 1.0,
+      "matched_facts": [
+        "ten business days"
+      ],
+      "citation_present_or_refused": true,
+      "expected_refusal": false,
+      "refusal_correct": true,
+      "refused": false,
+      "latency_ms": 4.44
+    },
+    {
+      "id": "publication-002",
+      "scenario": "answerable",
+      "question": "Which open-source licence should normally be used for internship source code?",
+      "fact_recall": 1.0,
+      "matched_facts": [
+        "apache license 2.0",
+        "after internal review"
+      ],
+      "citation_present_or_refused": true,
+      "expected_refusal": false,
+      "refusal_correct": true,
+      "refused": false,
+      "latency_ms": 4.7
+    },
+    {
+      "id": "mentoring-001",
+      "scenario": "answerable",
+      "question": "How often should an intern have a one-to-one meeting with a mentor?",
+      "fact_recall": 1.0,
+      "matched_facts": [
+        "30-minute",
+        "every week"
+      ],
+      "citation_present_or_refused": true,
+      "expected_refusal": false,
+      "refusal_correct": true,
+      "refused": false,
+      "latency_ms": 5.14
+    },
+    {
+      "id": "mentoring-002",
+      "scenario": "answerable",
+      "question": "What should an intern do if the day-to-day mentor has not answered a routine blocker for two working days?",
+      "fact_recall": 1.0,
+      "matched_facts": [
+        "faculty mentor or programme lead",
+        "two working days"
+      ],
+      "citation_present_or_refused": true,
+      "expected_refusal": false,
+      "refusal_correct": true,
+      "refused": false,
+      "latency_ms": 6.34
+    },
+    {
+      "id": "rag-eval-001",
+      "scenario": "answerable",
+      "question": "Which retrieval configurations are mandatory in the project comparison?",
+      "fact_recall": 1.0,
+      "matched_facts": [
+        "vector-only",
+        "keyword-only bm25",
+        "hybrid retrieval"
+      ],
+      "citation_present_or_refused": true,
+      "expected_refusal": false,
+      "refusal_correct": true,
+      "refused": false,
+      "latency_ms": 4.82
+    },
+    {
+      "id": "rag-eval-002",
+      "scenario": "answerable",
+      "question": "Which source-level retrieval metrics must the benchmark report?",
+      "fact_recall": 1.0,
+      "matched_facts": [
+        "recall@5",
+        "mrr",
+        "ndcg@5"
+      ],
+      "citation_present_or_refused": true,
+      "expected_refusal": false,
+      "refusal_correct": true,
+      "refused": false,
+      "latency_ms": 4.65
+    },
+    {
+      "id": "rag-eval-003",
+      "scenario": "answerable",
+      "question": "What chunk size, overlap, top-k, embedding dimension, and seed define the official baseline?",
+      "fact_recall": 1.0,
+      "matched_facts": [
+        "chunk size 900",
+        "overlap 160",
+        "top-k 5",
+        "embedding dimension 384",
+        "seed 42"
+      ],
+      "citation_present_or_refused": true,
+      "expected_refusal": false,
+      "refusal_correct": true,
+      "refused": false,
+      "latency_ms": 5.25
+    },
+    {
+      "id": "ambiguous-001",
+      "scenario": "ambiguous",
+      "question": "When is the report due?",
+      "fact_recall": 0.3333333333333333,
+      "matched_facts": [
+        "final written report"
+      ],
+      "citation_present_or_refused": true,
+      "expected_refusal": false,
+      "refusal_correct": true,
+      "refused": false,
+      "latency_ms": 4.68
+    },
+    {
+      "id": "ambiguous-002",
+      "scenario": "ambiguous",
+      "question": "What is the deadline for reporting an incident?",
+      "fact_recall": 0.0,
+      "matched_facts": [],
+      "citation_present_or_refused": true,
+      "expected_refusal": false,
+      "refusal_correct": true,
+      "refused": false,
+      "latency_ms": 6.64
+    },
+    {
+      "id": "ambiguous-003",
+      "scenario": "ambiguous",
+      "question": "Can project data be shared in the chat workspace?",
+      "fact_recall": 1.0,
+      "matched_facts": [
+        "public technical discussion",
+        "must not contain credentials",
+        "identifiable participant data"
+      ],
+      "citation_present_or_refused": true,
+      "expected_refusal": false,
+      "refusal_correct": true,
+      "refused": false,
+      "latency_ms": 5.6
+    },
+    {
+      "id": "conflict-001",
+      "scenario": "conflicting",
+      "question": "One document says the stipend is INR 35,000 and another says INR 45,000. Which amount applies in 2026?",
+      "fact_recall": 0.6666666666666666,
+      "matched_facts": [
+        "inr 45,000",
+        "archived 2025"
+      ],
+      "citation_present_or_refused": true,
+      "expected_refusal": false,
+      "refusal_correct": true,
+      "refused": false,
+      "latency_ms": 4.49
+    },
+    {
+      "id": "conflict-002",
+      "scenario": "conflicting",
+      "question": "Is the current internship 35 or 40 hours per week?",
+      "fact_recall": 1.0,
+      "matched_facts": [
+        "35 hours",
+        "40 hours",
+        "archived 2025"
+      ],
+      "citation_present_or_refused": true,
+      "expected_refusal": false,
+      "refusal_correct": true,
+      "refused": false,
+      "latency_ms": 4.6
+    },
+    {
+      "id": "conflict-003",
+      "scenario": "conflicting",
+      "question": "Does the 2026 programme end on 8 August or 21 August?",
+      "fact_recall": 0.6666666666666666,
+      "matched_facts": [
+        "21 august 2026",
+        "8 august"
+      ],
+      "citation_present_or_refused": true,
+      "expected_refusal": false,
+      "refusal_correct": true,
+      "refused": false,
+      "latency_ms": 4.78
+    },
+    {
+      "id": "unanswerable-001",
+      "scenario": "unanswerable",
+      "question": "Which cafeteria meal plan is assigned to interns?",
+      "fact_recall": null,
+      "matched_facts": [],
+      "citation_present_or_refused": true,
+      "expected_refusal": true,
+      "refusal_correct": true,
+      "refused": true,
+      "latency_ms": 4.38
+    },
+    {
+      "id": "unanswerable-002",
+      "scenario": "unanswerable",
+      "question": "What health-insurance policy number is issued to each intern?",
+      "fact_recall": null,
+      "matched_facts": [],
+      "citation_present_or_refused": true,
+      "expected_refusal": true,
+      "refusal_correct": false,
+      "refused": false,
+      "latency_ms": 4.64
+    },
+    {
+      "id": "unanswerable-003",
+      "scenario": "unanswerable",
+      "question": "Does the university sponsor an employment visa after the internship?",
+      "fact_recall": null,
+      "matched_facts": [],
+      "citation_present_or_refused": true,
+      "expected_refusal": true,
+      "refusal_correct": true,
+      "refused": true,
+      "latency_ms": 4.69
+    },
+    {
+      "id": "unanswerable-004",
+      "scenario": "unanswerable",
+      "question": "What parking permit colour should interns request?",
+      "fact_recall": null,
+      "matched_facts": [],
+      "citation_present_or_refused": true,
+      "expected_refusal": true,
+      "refusal_correct": true,
+      "refused": true,
+      "latency_ms": 4.13
+    },
+    {
+      "id": "unanswerable-005",
+      "scenario": "unanswerable",
+      "question": "How many qubits are available on the university quantum computer?",
+      "fact_recall": null,
+      "matched_facts": [],
+      "citation_present_or_refused": true,
+      "expected_refusal": true,
+      "refusal_correct": true,
+      "refused": true,
+      "latency_ms": 3.93
+    }
+  ]
+}

@@ -1,0 +1,195 @@
+{"kind":"deck","id":"pr/xhowox","name":"Deck"}
+{"kind":"layout","layoutId":"c507cc66-3316-4dd4-bd3c-ed80a89b107a","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"feede8a1-d9ba-4c80-8247-69acf1a50126","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/3mkhir","slide":1,"title":"SUMMER INTERNSHIP PROJECT","textShapes":6}
+{"kind":"textbox","id":"sh/qt0jm1gv","slide":1,"text":"SUMMER INTERNSHIP PROJECT","textPreview":"SUMMER INTERNSHIP PROJECT","textChars":25,"textLines":1,"bbox":[72,76,360,24]}
+{"kind":"textbox","id":"sh/dgb2xgf6","slide":1,"text":"Development of Advanced AI Applications using RAG and LLM APIs","textPreview":"Development of Advanced AI Applications using RAG and LLM APIs","textChars":62,"textLines":1,"bbox":[72,152,700,196]}
+{"kind":"textbox","id":"sh/sv21oby1","slide":1,"text":"A grounded knowledge-assistant prototype with retrieval evaluation and configurable LLM APIs","textPreview":"A grounded knowledge-assistant prototype with retrieval evaluation and configurable LLM APIs","textChars":92,"textLines":1,"bbox":[72,382,650,68]}
+{"kind":"shape","id":"sh/fitkzqxc","slide":1,"bbox":[836,126,300,300]}
+{"kind":"textbox","id":"sh/ehkjqlgr","slide":1,"text":"RAG","textPreview":"RAG","textChars":3,"textLines":1,"bbox":[876,190,220,82]}
+{"kind":"textbox","id":"sh/1kb21gfi","slide":1,"text":"retrieval\n+ evidence\n+ generation","textPreview":"retrieval | + evidence | + generation","textChars":33,"textLines":3,"bbox":[876,292,220,92]}
+{"kind":"textbox","id":"sh/0j21svyx","slide":1,"text":"Master's Summer Internship | July 2026","textPreview":"Master's Summer Internship | July 2026","textChars":38,"textLines":1,"bbox":[72,610,600,24]}
+{"kind":"notes","id":"nt/3mkhir","slide":1,"text":""}
+{"kind":"slide","id":"sl/d2di7o","slide":2,"title":"PROBLEM","textShapes":18}
+{"kind":"textbox","id":"sh/za1k3i9w","slide":2,"text":"PROBLEM","textPreview":"PROBLEM","textChars":7,"textLines":1,"bbox":[72,26,400,20]}
+{"kind":"textbox","id":"sh/0ba1w3qh","slide":2,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[1165,26,44,20]}
+{"kind":"textbox","id":"sh/lcj258r2","slide":2,"text":"LLMs need evidence, not just fluent answers","textPreview":"LLMs need evidence, not just fluent answers","textChars":43,"textLines":1,"bbox":[72,66,960,56]}
+{"kind":"textbox","id":"sh/mdsjyd87","slide":2,"text":"The project makes source grounding, citation display, and insufficient-evidence refusal explicit parts of the application.","textPreview":"The project makes source grounding, citation display, and insufficient-evidence refusal explicit parts of the application.","textChars":122,"textLines":1,"bbox":[72,128,1030,38]}
+{"kind":"shape","id":"sh/nelk7i9s","slide":2,"bbox":[72,205,520,346]}
+{"kind":"shape","id":"sh/8fu10nqd","slide":2,"bbox":[646,205,562,346]}
+{"kind":"textbox","id":"sh/9g329sry","slide":2,"text":"Without retrieval","textPreview":"Without retrieval","textChars":17,"textLines":1,"bbox":[106,240,380,38]}
+{"kind":"textbox","id":"sh/a1cj2x8j","slide":2,"text":"•","textPreview":"•","textChars":1,"textLines":1,"bbox":[106,304,20,24]}
+{"kind":"textbox","id":"sh/v2lkb294","slide":2,"text":"Stale or unsupported claims can sound credible","textPreview":"Stale or unsupported claims can sound credible","textChars":46,"textLines":1,"bbox":[134,305,392,48]}
+{"kind":"textbox","id":"sh/3i947i9k","slide":2,"text":"•","textPreview":"•","textChars":1,"textLines":1,"bbox":[106,384,20,24]}
+{"kind":"textbox","id":"sh/2h03ydsz","slide":2,"text":"Private documents are absent from model parameters","textPreview":"Private documents are absent from model parameters","textChars":50,"textLines":1,"bbox":[134,385,392,48]}
+{"kind":"textbox","id":"sh/pkrm9sra","slide":2,"text":"•","textPreview":"•","textChars":1,"textLines":1,"bbox":[106,464,20,24]}
+{"kind":"textbox","id":"sh/4jil0na5","slide":2,"text":"Users cannot inspect why an answer was given","textPreview":"Users cannot inspect why an answer was given","textChars":44,"textLines":1,"bbox":[134,465,392,48]}
+{"kind":"textbox","id":"sh/fe943y98","slide":2,"text":"With this RAG system","textPreview":"With this RAG system","textChars":20,"textLines":1,"bbox":[680,240,400,38]}
+{"kind":"textbox","id":"sh/udg3udsn","slide":2,"text":"•","textPreview":"•","textChars":1,"textLines":1,"bbox":[680,304,20,24]}
+{"kind":"textbox","id":"sh/hgrm58re","slide":2,"text":"Documents are chunked and retrieved at query time","textPreview":"Documents are chunked and retrieved at query time","textChars":49,"textLines":1,"bbox":[708,305,422,48]}
+{"kind":"textbox","id":"sh/gfilw3at","slide":2,"text":"•","textPreview":"•","textChars":1,"textLines":1,"bbox":[680,384,20,24]}
+{"kind":"textbox","id":"sh/zat4f29s","slide":2,"text":"Answers show inline citations and source excerpts","textPreview":"Answers show inline citations and source excerpts","textChars":49,"textLines":1,"bbox":[708,385,422,48]}
+{"kind":"textbox","id":"sh/e9kn6xs7","slide":2,"text":"•","textPreview":"•","textChars":1,"textLines":1,"bbox":[680,464,20,24]}
+{"kind":"textbox","id":"sh/a5o7e1cf","slide":2,"text":"Weak evidence produces a transparent refusal","textPreview":"Weak evidence produces a transparent refusal","textChars":44,"textLines":1,"bbox":[708,465,422,48]}
+{"kind":"notes","id":"nt/d2di7o","slide":2,"text":""}
+{"kind":"slide","id":"sl/x3lgh7","slide":3,"title":"APPLICATION","textShapes":13}
+{"kind":"textbox","id":"sh/p8r6dsvu","slide":3,"text":"APPLICATION","textPreview":"APPLICATION","textChars":11,"textLines":1,"bbox":[72,26,400,20]}
+{"kind":"textbox","id":"sh/250n2xc3","slide":3,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1165,26,44,20]}
+{"kind":"textbox","id":"sh/n69ob2do","slide":3,"text":"The prototype is a working research assistant","textPreview":"The prototype is a working research assistant","textChars":45,"textLines":1,"bbox":[72,66,960,56]}
+{"kind":"textbox","id":"sh/cbi587ul","slide":3,"text":"Users ingest a corpus, ask a question, inspect evidence, and run the evaluation from one local interface.","textPreview":"Users ingest a corpus, ask a question, inspect evidence, and run the evaluation from one local interface.","textChars":105,"textLines":1,"bbox":[72,128,1030,38]}
+{"kind":"shape","id":"sh/xcb6hcvq","slide":3,"bbox":[72,190,790,444]}
+{"kind":"textbox","id":"sh/ba9of2d0","slide":3,"text":"User-facing controls","textPreview":"User-facing controls","textChars":20,"textLines":1,"bbox":[908,220,230,30]}
+{"kind":"textbox","id":"sh/kz2pc7uh","slide":3,"text":"•","textPreview":"•","textChars":1,"textLines":1,"bbox":[908,286,20,24]}
+{"kind":"textbox","id":"sh/l0b6lcv2","slide":3,"text":"Upload or load a document corpus","textPreview":"Upload or load a document corpus","textChars":32,"textLines":1,"bbox":[936,287,222,48]}
+{"kind":"textbox","id":"sh/1sb2dsja","slide":3,"text":"•","textPreview":"•","textChars":1,"textLines":1,"bbox":[908,372,20,24]}
+{"kind":"textbox","id":"sh/gr214n2p","slide":3,"text":"Ask grounded questions","textPreview":"Ask grounded questions","textChars":22,"textLines":1,"bbox":[936,373,222,48]}
+{"kind":"textbox","id":"sh/fq9kbi14","slide":3,"text":"•","textPreview":"•","textChars":1,"textLines":1,"bbox":[908,458,20,24]}
+{"kind":"textbox","id":"sh/ep0j2dkj","slide":3,"text":"Inspect citations and latency","textPreview":"Inspect citations and latency","textChars":29,"textLines":1,"bbox":[936,459,222,48]}
+{"kind":"textbox","id":"sh/pwb2hsj6","slide":3,"text":"•","textPreview":"•","textChars":1,"textLines":1,"bbox":[908,544,20,24]}
+{"kind":"textbox","id":"sh/ov218n2l","slide":3,"text":"Run repeatable evaluation","textPreview":"Run repeatable evaluation","textChars":25,"textLines":1,"bbox":[936,545,222,48]}
+{"kind":"image","id":"im/j2psraxc","slide":3,"name":"","geometry":"roundRect","alt":"Knowledge Assistant showing grounded answer and retrieved sources","bbox":[82,200,770,424]}
+{"kind":"notes","id":"nt/x3lgh7","slide":3,"text":""}
+{"kind":"slide","id":"sl/sx27ek","slide":4,"title":"ARCHITECTURE","textShapes":15}
+{"kind":"textbox","id":"sh/at47qx0n","slide":4,"text":"ARCHITECTURE","textPreview":"ARCHITECTURE","textChars":12,"textLines":1,"bbox":[72,26,400,20]}
+{"kind":"textbox","id":"sh/xgvqlczy","slide":4,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[1165,26,44,20]}
+{"kind":"textbox","id":"sh/wfmps7yd","slide":4,"text":"Retrieval and generation stay independently testable","textPreview":"Retrieval and generation stay independently testable","textChars":52,"textLines":1,"bbox":[72,66,960,56]}
+{"kind":"textbox","id":"sh/jix8nmh4","slide":4,"text":"Persistent chunks and evidence diagnostics make each stage inspectable.","textPreview":"Persistent chunks and evidence diagnostics make each stage inspectable.","textChars":71,"textLines":1,"bbox":[72,128,1030,38]}
+{"kind":"shape","id":"sh/ih47uhgj","slide":4,"bbox":[72,266,180,170]}
+{"kind":"textbox","id":"sh/5kfqpwza","slide":4,"text":"Documents","textPreview":"Documents","textChars":9,"textLines":1,"bbox":[90,304,144,42]}
+{"kind":"textbox","id":"sh/kj6pwryp","slide":4,"text":"extract + normalize","textPreview":"extract + normalize","textChars":19,"textLines":1,"bbox":[92,358,140,44]}
+{"kind":"shape","id":"sh/zmtobih0","slide":4,"bbox":[252,342,28,24]}
+{"kind":"shape","id":"sh/elk7id0f","slide":4,"bbox":[292,266,180,170]}
+{"kind":"textbox","id":"sh/cje9grqp","slide":4,"text":"Chunks","textPreview":"Chunks","textChars":6,"textLines":1,"bbox":[310,304,144,42]}
+{"kind":"textbox","id":"sh/xknapwra","slide":4,"text":"hash embeddings + SQLite","textPreview":"hash embeddings + SQLite","textChars":24,"textLines":1,"bbox":[312,358,140,44]}
+{"kind":"shape","id":"sh/ahwreh8j","slide":4,"bbox":[472,342,28,24]}
+{"kind":"shape","id":"sh/bi5snm94","slide":4,"bbox":[512,266,180,170]}
+{"kind":"textbox","id":"sh/kny9krq1","slide":4,"text":"Retrieve","textPreview":"Retrieve","textChars":8,"textLines":1,"bbox":[530,304,144,42]}
+{"kind":"textbox","id":"sh/lo7atwr6","slide":4,"text":"vector + BM25 + RRF","textPreview":"vector + BM25 + RRF","textChars":19,"textLines":1,"bbox":[532,358,140,44]}
+{"kind":"shape","id":"sh/ylgri18v","slide":4,"bbox":[692,342,28,24]}
+{"kind":"shape","id":"sh/zmpsrm9g","slide":4,"bbox":[732,266,180,170]}
+{"kind":"textbox","id":"sh/0ru987qh","slide":4,"text":"Evidence gate","textPreview":"Evidence gate","textChars":13,"textLines":1,"bbox":[750,304,144,42]}
+{"kind":"textbox","id":"sh/1s3ahcr2","slide":4,"text":"answer or refuse","textPreview":"answer or refuse","textChars":16,"textLines":1,"bbox":[752,358,140,44]}
+{"kind":"shape","id":"sh/h8vqlojq","slide":4,"bbox":[912,342,28,24]}
+{"kind":"shape","id":"sh/gnmpc3il","slide":4,"bbox":[952,266,180,170]}
+{"kind":"textbox","id":"sh/fmd8jy10","slide":4,"text":"Provider","textPreview":"Provider","textChars":8,"textLines":1,"bbox":[970,304,144,42]}
+{"kind":"textbox","id":"sh/ul47atkf","slide":4,"text":"offline, OpenAI, Ollama","textPreview":"offline, OpenAI, Ollama","textChars":23,"textLines":1,"bbox":[972,358,140,44]}
+{"kind":"textbox","id":"sh/pcfqp8j2","slide":4,"text":"Citation validation attaches retrieved source, chunk position, score, and excerpt to each accepted answer.","textPreview":"Citation validation attaches retrieved source, chunk position, score, and excerpt to each accepted answer.","textChars":106,"textLines":1,"bbox":[152,524,976,32]}
+{"kind":"notes","id":"nt/sx27ek","slide":4,"text":""}
+{"kind":"slide","id":"sl/abqxgy","slide":5,"title":"EVALUATION","textShapes":23}
+{"kind":"textbox","id":"sh/s3a5sza5","slide":5,"text":"EVALUATION","textPreview":"EVALUATION","textChars":10,"textLines":1,"bbox":[72,26,400,20]}
+{"kind":"textbox","id":"sh/7214ju9k","slide":5,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1165,26,44,20]}
+{"kind":"textbox","id":"sh/61snqpsz","slide":5,"text":"The evaluation tests real retrieval failure modes","textPreview":"The evaluation tests real retrieval failure modes","textChars":49,"textLines":1,"bbox":[72,66,960,56]}
+{"kind":"textbox","id":"sh/50jmhkre","slide":5,"text":"41 labeled cases over 13 university AI research internship documents create a repeatable local benchmark.","textPreview":"41 labeled cases over 13 university AI research internship documents create a repeatable local benchmark.","textChars":105,"textLines":1,"bbox":[72,128,1030,38]}
+{"kind":"textbox","id":"sh/kfa5ozat","slide":5,"text":"41","textPreview":"41","textChars":2,"textLines":1,"bbox":[95,500,280,78]}
+{"kind":"textbox","id":"sh/jeh4fu98","slide":5,"text":"total cases","textPreview":"total cases","textChars":11,"textLines":1,"bbox":[95,588,285,48]}
+{"kind":"textbox","id":"sh/id8nmps3","slide":5,"text":"13","textPreview":"13","textChars":2,"textLines":1,"bbox":[430,500,280,78]}
+{"kind":"textbox","id":"sh/xczmdkri","slide":5,"text":"source documents","textPreview":"source documents","textChars":16,"textLines":1,"bbox":[430,588,285,48]}
+{"kind":"textbox","id":"sh/wbq5kfax","slide":5,"text":"29","textPreview":"29","textChars":2,"textLines":1,"bbox":[765,500,280,78]}
+{"kind":"textbox","id":"sh/epkfapgz","slide":5,"text":"indexed chunks","textPreview":"indexed chunks","textChars":14,"textLines":1,"bbox":[765,588,285,48]}
+{"kind":"textbox","id":"sh/fqtg3uxk","slide":5,"text":"Scenario coverage","textPreview":"Scenario coverage","textChars":17,"textLines":1,"bbox":[92,212,230,28]}
+{"kind":"textbox","id":"sh/0r2xczyp","slide":5,"text":"30","textPreview":"30","textChars":2,"textLines":1,"bbox":[96,275,50,28]}
+{"kind":"textbox","id":"sh/1sby54fa","slide":5,"text":"answerable","textPreview":"answerable","textChars":10,"textLines":1,"bbox":[160,277,210,28]}
+{"kind":"textbox","id":"sh/q10f6pgn","slide":5,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[96,333,50,28]}
+{"kind":"textbox","id":"sh/r29gzux8","slide":5,"text":"ambiguous","textPreview":"ambiguous","textChars":9,"textLines":1,"bbox":[160,335,210,28]}
+{"kind":"textbox","id":"sh/s3ix8zyt","slide":5,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[96,391,50,28]}
+{"kind":"textbox","id":"sh/dory1kfe","slide":5,"text":"conflicting","textPreview":"conflicting","textChars":11,"textLines":1,"bbox":[160,393,210,28]}
+{"kind":"textbox","id":"sh/ix0f25gr","slide":5,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[96,449,50,28]}
+{"kind":"textbox","id":"sh/3y9gvaxc","slide":5,"text":"unanswerable","textPreview":"unanswerable","textChars":12,"textLines":1,"bbox":[160,451,210,28]}
+{"kind":"shape","id":"sh/725c36d4","slide":5,"bbox":[666,205,470,100]}
+{"kind":"textbox","id":"sh/m1wva1wj","slide":5,"text":"Answer evaluation","textPreview":"Answer evaluation","textChars":17,"textLines":1,"bbox":[696,226,180,22]}
+{"kind":"textbox","id":"sh/t4nu5gvu","slide":5,"text":"required-fact recall • citation/refusal coverage • latency","textPreview":"required-fact recall • citation/refusal coverage • latency","textChars":58,"textLines":1,"bbox":[696,258,395,26]}
+{"kind":"shape","id":"sh/83edcbe9","slide":5,"bbox":[666,326,470,100]}
+{"kind":"textbox","id":"sh/v6pc7qd0","slide":5,"text":"Retrieval evaluation","textPreview":"Retrieval evaluation","textChars":20,"textLines":1,"bbox":[696,347,180,22]}
+{"kind":"textbox","id":"sh/u5wvelwf","slide":5,"text":"Recall@5 • MRR • nDCG@5 • abstention accuracy","textPreview":"Recall@5 • MRR • nDCG@5 • abstention accuracy","textChars":45,"textLines":1,"bbox":[696,379,395,26]}
+{"kind":"notes","id":"nt/abqxgy","slide":5,"text":""}
+{"kind":"slide","id":"sl/bqjbp3","slide":6,"title":"RESULTS","textShapes":10}
+{"kind":"textbox","id":"sh/2543q9c7","slide":6,"text":"RESULTS","textPreview":"RESULTS","textChars":7,"textLines":1,"bbox":[72,26,400,20]}
+{"kind":"textbox","id":"sh/p8v214vi","slide":6,"text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[1165,26,44,20]}
+{"kind":"textbox","id":"sh/o7mlsjux","slide":6,"text":"Hybrid retrieval wins the combined benchmark","textPreview":"Hybrid retrieval wins the combined benchmark","textChars":44,"textLines":1,"bbox":[72,66,960,56]}
+{"kind":"textbox","id":"sh/fidkvudg","slide":6,"text":"Keyword-only ranking leads pure retrieval, but hybrid wins once evidence-gate abstention is included.","textPreview":"Keyword-only ranking leads pure retrieval, but hybrid wins once evidence-gate abstention is included.","textChars":101,"textLines":1,"bbox":[72,128,1030,38]}
+{"kind":"shape","id":"sh/14v2x4vm","slide":6,"bbox":[810,218,342,98]}
+{"kind":"textbox","id":"sh/03m1ozu1","slide":6,"text":"Hybrid combined score","textPreview":"Hybrid combined score","textChars":21,"textLines":1,"bbox":[840,240,250,23]}
+{"kind":"textbox","id":"sh/retkrudk","slide":6,"text":"0.9126","textPreview":"0.9126","textChars":6,"textLines":1,"bbox":[840,264,250,42]}
+{"kind":"shape","id":"sh/6dkjipcz","slide":6,"bbox":[810,340,342,98]}
+{"kind":"textbox","id":"sh/4ba5gvmt","slide":6,"text":"Hybrid Recall@5","textPreview":"Hybrid Recall@5","textChars":15,"textLines":1,"bbox":[840,362,250,23]}
+{"kind":"textbox","id":"sh/5cjm903y","slide":6,"text":"1.0000","textPreview":"1.0000","textChars":6,"textLines":1,"bbox":[840,386,250,42]}
+{"kind":"shape","id":"sh/i9sne54n","slide":6,"bbox":[810,462,342,98]}
+{"kind":"textbox","id":"sh/3a147al8","slide":6,"text":"Hybrid abstention","textPreview":"Hybrid abstention","textChars":17,"textLines":1,"bbox":[840,484,250,23]}
+{"kind":"textbox","id":"sh/g7qlcvmh","slide":6,"text":"0.8000","textPreview":"0.8000","textChars":6,"textLines":1,"bbox":[840,508,250,42]}
+{"kind":"chart","id":"ch/et8v2h0b","slide":6,"name":"","chartType":"bar","bbox":[76,204,690,382]}
+{"kind":"notes","id":"nt/bqjbp3","slide":6,"text":""}
+{"kind":"slide","id":"sl/af3ki0","slide":7,"title":"SAFETY","textShapes":9}
+{"kind":"textbox","id":"sh/yp4r2d4z","slide":7,"text":"SAFETY","textPreview":"SAFETY","textChars":6,"textLines":1,"bbox":[72,26,400,20]}
+{"kind":"textbox","id":"sh/lsvad83a","slide":7,"text":"07","textPreview":"07","textChars":2,"textLines":1,"bbox":[1165,26,44,20]}
+{"kind":"textbox","id":"sh/krm943mp","slide":7,"text":"Evidence gating preserves answerable cases","textPreview":"Evidence gating preserves answerable cases","textChars":42,"textLines":1,"bbox":[72,66,960,56]}
+{"kind":"textbox","id":"sh/bmd87yl8","slide":7,"text":"The hybrid threshold is configurable and must be revalidated on a held-out dataset.","textPreview":"The hybrid threshold is configurable and must be revalidated on a held-out dataset.","textChars":83,"textLines":1,"bbox":[72,128,1030,38]}
+{"kind":"shape","id":"sh/alkryt4n","slide":7,"bbox":[72,220,530,250]}
+{"kind":"textbox","id":"sh/xova983e","slide":7,"text":"0.8000","textPreview":"0.8000","textChars":6,"textLines":1,"bbox":[112,268,270,74]}
+{"kind":"textbox","id":"sh/cnm903mt","slide":7,"text":"unanswerable-refusal accuracy\n4 of 5 unsupported requests refused","textPreview":"unanswerable-refusal accuracy | 4 of 5 unsupported requests refused","textChars":65,"textLines":2,"bbox":[112,355,350,62]}
+{"kind":"shape","id":"sh/nyt83elc","slide":7,"bbox":[678,220,530,250]}
+{"kind":"textbox","id":"sh/2xkrut4r","slide":7,"text":"1.0000","textPreview":"1.0000","textChars":6,"textLines":1,"bbox":[718,268,270,74]}
+{"kind":"textbox","id":"sh/sr2psjit","slide":7,"text":"answerable non-refusal rate\nno answerable case rejected in this run","textPreview":"answerable non-refusal rate | no answerable case rejected in this run","textChars":67,"textLines":2,"bbox":[718,355,360,62]}
+{"kind":"textbox","id":"sh/tsvq1oje","slide":7,"text":"Decision rule: low hybrid score + low vector similarity + limited lexical overlap + weak keyword evidence.","textPreview":"Decision rule: low hybrid score + low vector similarity + limited lexical overlap + weak keyword evidence.","textChars":106,"textLines":1,"bbox":[98,542,1050,34]}
+{"kind":"notes","id":"nt/af3ki0","slide":7,"text":""}
+{"kind":"slide","id":"sl/gu7snt","slide":8,"title":"LLM APIS","textShapes":11}
+{"kind":"textbox","id":"sh/epobqtkz","slide":8,"text":"LLM APIS","textPreview":"LLM APIS","textChars":8,"textLines":1,"bbox":[72,26,400,20]}
+{"kind":"textbox","id":"sh/1sfa1oja","slide":8,"text":"08","textPreview":"08","textChars":2,"textLines":1,"bbox":[1165,26,44,20]}
+{"kind":"textbox","id":"sh/0r6tsj2p","slide":8,"text":"Generation providers remain replaceable","textPreview":"Generation providers remain replaceable","textChars":39,"textLines":1,"bbox":[72,66,960,56]}
+{"kind":"textbox","id":"sh/nexs3y1g","slide":8,"text":"Offline mode keeps the project reproducible; remote models are explicit configuration, not hidden dependencies.","textPreview":"Offline mode keeps the project reproducible; remote models are explicit configuration, not hidden dependencies.","textChars":111,"textLines":1,"bbox":[72,128,1030,38]}
+{"kind":"shape","id":"sh/2dobutkv","slide":8,"bbox":[72,226,340,270]}
+{"kind":"textbox","id":"sh/pgza58jm","slide":8,"text":"Offline extractive","textPreview":"Offline extractive","textChars":18,"textLines":1,"bbox":[98,258,290,36]}
+{"kind":"textbox","id":"sh/of6tw321","slide":8,"text":"Deterministic baseline\nNo API key\nUsed for recorded results","textPreview":"Deterministic baseline | No API key | Used for recorded results","textChars":59,"textLines":3,"bbox":[98,330,286,105]}
+{"kind":"shape","id":"sh/bihs7y1c","slide":8,"bbox":[452,226,340,270]}
+{"kind":"textbox","id":"sh/ah8bydkr","slide":8,"text":"OpenAI Responses API","textPreview":"OpenAI Responses API","textChars":20,"textLines":1,"bbox":[478,258,290,36]}
+{"kind":"textbox","id":"sh/kfil8na5","slide":8,"text":"Configurable GPT-5.6 model\nEnvironment-loaded key\nBounded output tokens","textPreview":"Configurable GPT-5.6 model | Environment-loaded key | Bounded output tokens","textChars":71,"textLines":3,"bbox":[478,330,286,105]}
+{"kind":"shape","id":"sh/5grm1sbq","slide":8,"bbox":[832,226,340,270]}
+{"kind":"textbox","id":"sh/idg36dsf","slide":8,"text":"Ollama","textPreview":"Ollama","textChars":6,"textLines":1,"bbox":[858,258,290,36]}
+{"kind":"textbox","id":"sh/je94zit0","slide":8,"text":"Local HTTP endpoint\nModel selected by config\nNo cloud requirement","textPreview":"Local HTTP endpoint | Model selected by config | No cloud requirement","textChars":65,"textLines":3,"bbox":[858,330,286,105]}
+{"kind":"textbox","id":"sh/sjilcnah","slide":8,"text":"OpenAI SDK integration uses the Responses API; a live request needs OPENAI_API_KEY and remains untested here because no credential was provided.","textPreview":"OpenAI SDK integration uses the Responses API; a live request needs OPENAI_API_KEY and remains untested here because no credential was pr...","textChars":144,"textLines":1,"bbox":[95,555,1090,38]}
+{"kind":"notes","id":"nt/gu7snt","slide":8,"text":""}
+{"kind":"slide","id":"sl/i8kg0w","slide":9,"title":"PLAN","textShapes":22}
+{"kind":"textbox","id":"sh/cfqlofil","slide":9,"text":"PLAN","textPreview":"PLAN","textChars":4,"textLines":1,"bbox":[72,26,400,20]}
+{"kind":"textbox","id":"sh/behkvah0","slide":9,"text":"09","textPreview":"09","textChars":2,"textLines":1,"bbox":[1165,26,44,20]}
+{"kind":"textbox","id":"sh/ad83m50f","slide":9,"text":"A six-week engineering plan","textPreview":"A six-week engineering plan","textChars":27,"textLines":1,"bbox":[72,66,960,56]}
+{"kind":"textbox","id":"sh/pcz2t0zu","slide":9,"text":"Each phase leaves a demonstrable artifact rather than only a conceptual milestone.","textPreview":"Each phase leaves a demonstrable artifact rather than only a conceptual milestone.","textChars":82,"textLines":1,"bbox":[72,128,1030,38]}
+{"kind":"shape","id":"sh/obqlkfi9","slide":9,"bbox":[208,357,50,1]}
+{"kind":"shape","id":"sh/3axkrah4","slide":9,"bbox":[102,320,76,76]}
+{"kind":"textbox","id":"sh/29o3i50j","slide":9,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[102,337,76,34]}
+{"kind":"textbox","id":"sh/98jm54ze","slide":9,"text":"Design","textPreview":"Design","textChars":6,"textLines":1,"bbox":[72,432,136,28]}
+{"kind":"textbox","id":"sh/87alwzit","slide":9,"text":"scope + architecture","textPreview":"scope + architecture","textChars":20,"textLines":1,"bbox":[72,470,136,38]}
+{"kind":"shape","id":"sh/69g7ytwr","slide":9,"bbox":[392,357,50,1]}
+{"kind":"shape","id":"sh/ra987ydc","slide":9,"bbox":[286,320,76,76]}
+{"kind":"textbox","id":"sh/sbip03ex","slide":9,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[286,337,76,34]}
+{"kind":"textbox","id":"sh/twrq98vi","slide":9,"text":"Ingest","textPreview":"Ingest","textChars":6,"textLines":1,"bbox":[256,432,136,28]}
+{"kind":"textbox","id":"sh/i5g7utwv","slide":9,"text":"loaders + chunks","textPreview":"loaders + chunks","textChars":16,"textLines":1,"bbox":[256,470,136,38]}
+{"kind":"shape","id":"sh/j6p83yx0","slide":9,"bbox":[576,357,50,1]}
+{"kind":"shape","id":"sh/k7ypw3el","slide":9,"bbox":[470,320,76,76]}
+{"kind":"textbox","id":"sh/587q58f6","slide":9,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[470,337,76,34]}
+{"kind":"textbox","id":"sh/21kr6dwz","slide":9,"text":"Retrieve","textPreview":"Retrieve","textChars":8,"textLines":1,"bbox":[440,432,136,28]}
+{"kind":"textbox","id":"sh/32t8fidk","slide":9,"text":"hybrid baseline","textPreview":"hybrid baseline","textChars":15,"textLines":1,"bbox":[440,470,136,38]}
+{"kind":"shape","id":"sh/z6l47adw","slide":9,"bbox":[760,357,50,1]}
+{"kind":"shape","id":"sh/ylcnypcb","slide":9,"bbox":[654,320,76,76]}
+{"kind":"textbox","id":"sh/l83m9kv2","slide":9,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[654,337,76,34]}
+{"kind":"textbox","id":"sh/07u50fuh","slide":9,"text":"Generate","textPreview":"Generate","textChars":8,"textLines":1,"bbox":[624,432,136,28]}
+{"kind":"textbox","id":"sh/nalobuds","slide":9,"text":"providers + UI","textPreview":"providers + UI","textChars":14,"textLines":1,"bbox":[624,470,136,38]}
+{"kind":"shape","id":"sh/m9cn2pcn","slide":9,"bbox":[944,357,50,1]}
+{"kind":"shape","id":"sh/9cn6d4by","slide":9,"bbox":[838,320,76,76]}
+{"kind":"textbox","id":"sh/8be54zud","slide":9,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[838,337,76,34]}
+{"kind":"textbox","id":"sh/ve5ofut4","slide":9,"text":"Evaluate","textPreview":"Evaluate","textChars":8,"textLines":1,"bbox":[808,432,136,28]}
+{"kind":"textbox","id":"sh/adwn69cj","slide":9,"text":"tests + benchmark","textPreview":"tests + benchmark","textChars":17,"textLines":1,"bbox":[808,470,136,38]}
+{"kind":"shape","id":"sh/sjy5wzah","slide":9,"bbox":[1022,320,76,76]}
+{"kind":"textbox","id":"sh/t47mp4r2","slide":9,"text":"6","textPreview":"6","textChars":1,"textLines":1,"bbox":[1022,337,76,34]}
+{"kind":"textbox","id":"sh/6hw3u9sr","slide":9,"text":"Report","textPreview":"Report","textChars":6,"textLines":1,"bbox":[992,432,136,28]}
+{"kind":"textbox","id":"sh/7ip4ne9c","slide":9,"text":"analysis + demo","textPreview":"analysis + demo","textChars":15,"textLines":1,"bbox":[992,470,136,38]}
+{"kind":"notes","id":"nt/i8kg0w","slide":9,"text":""}
+{"kind":"slide","id":"sl/i2kjy1","slide":10,"title":"What the prototype demonstrates","textShapes":9}
+{"kind":"textbox","id":"sh/y10ba1cz","slide":10,"text":"What the prototype demonstrates","textPreview":"What the prototype demonstrates","textChars":31,"textLines":1,"bbox":[72,86,780,52]}
+{"kind":"textbox","id":"sh/l4rulgba","slide":10,"text":"•","textPreview":"•","textChars":1,"textLines":1,"bbox":[94,200,20,24]}
+{"kind":"textbox","id":"sh/k3itcba5","slide":10,"text":"An end-to-end RAG workflow that is locally runnable and inspectable","textPreview":"An end-to-end RAG workflow that is locally runnable and inspectable","textChars":67,"textLines":1,"bbox":[122,201,902,48]}
+{"kind":"textbox","id":"sh/by9cfmt8","slide":10,"text":"•","textPreview":"•","textChars":1,"textLines":1,"bbox":[94,294,20,24]}
+{"kind":"textbox","id":"sh/axgb6hcn","slide":10,"text":"A reproducible 41-case evaluation with retrieval ablations","textPreview":"A reproducible 41-case evaluation with retrieval ablations","textChars":58,"textLines":1,"bbox":[122,295,902,48]}
+{"kind":"textbox","id":"sh/x0ruhwbe","slide":10,"text":"•","textPreview":"•","textChars":1,"textLines":1,"bbox":[94,388,20,24]}
+{"kind":"textbox","id":"sh/czit8rut","slide":10,"text":"A clear path to API-backed generation once credentials and a held-out test set are available","textPreview":"A clear path to API-backed generation once credentials and a held-out test set are available","textChars":92,"textLines":1,"bbox":[122,389,992,48]}
+{"kind":"textbox","id":"sh/napcbmtc","slide":10,"text":"Next: validate against held-out documents, add human claim-level review, and measure remote-provider cost and latency.","textPreview":"Next: validate against held-out documents, add human claim-level review, and measure remote-provider cost and latency.","textChars":118,"textLines":1,"bbox":[94,535,950,56]}
+{"kind":"textbox","id":"sh/29gb2hcr","slide":10,"text":"Advanced RAG and LLM API Assistant","textPreview":"Advanced RAG and LLM API Assistant","textChars":34,"textLines":1,"bbox":[72,650,420,20]}
+{"kind":"notes","id":"nt/i2kjy1","slide":10,"text":""}
