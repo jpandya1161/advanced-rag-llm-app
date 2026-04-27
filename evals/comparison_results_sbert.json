@@ -1,0 +1,2602 @@
+{
+  "benchmark": {
+    "dataset": "evals/sample_questions.jsonl",
+    "documents_directory": "sample_docs",
+    "cases": 41,
+    "documents": 13,
+    "chunks": 29,
+    "top_k": 5,
+    "chunk_size": 900,
+    "chunk_overlap": 160,
+    "embedding_dimension": 384,
+    "embedding_provider": "sentence-transformers",
+    "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+    "ranking_unit": "unique source document"
+  },
+  "configurations": [
+    {
+      "name": "vector_only",
+      "summary": {
+        "cases": 41,
+        "retrieval_cases": 36,
+        "unanswerable_cases": 5,
+        "recall_at_k": 0.9861,
+        "mrr": 0.9398,
+        "ndcg_at_k": 0.9365,
+        "unanswerable_abstention_accuracy": 0.0,
+        "benchmark_score": 0.8223
+      },
+      "by_scenario": {
+        "ambiguous": {
+          "cases": 3,
+          "recall_at_k": 0.8333,
+          "mrr": 1.0,
+          "ndcg_at_k": 0.8443,
+          "abstention_accuracy": null
+        },
+        "answerable": {
+          "cases": 30,
+          "recall_at_k": 1.0,
+          "mrr": 0.9444,
+          "ndcg_at_k": 0.956,
+          "abstention_accuracy": null
+        },
+        "conflicting": {
+          "cases": 3,
+          "recall_at_k": 1.0,
+          "mrr": 0.8333,
+          "ndcg_at_k": 0.8337,
+          "abstention_accuracy": null
+        },
+        "unanswerable": {
+          "cases": 5,
+          "recall_at_k": null,
+          "mrr": null,
+          "ndcg_at_k": null,
+          "abstention_accuracy": 0.0
+        }
+      },
+      "cases": [
+        {
+          "id": "policy-001",
+          "scenario": "answerable",
+          "question": "What are the official start and end dates for the 2026 internship?",
+          "expected_sources": [
+            "internship_handbook.txt"
+          ],
+          "top_sources": [
+            "archived_2025_faq.txt",
+            "internship_handbook.txt",
+            "milestones_and_assessment.txt",
+            "work_schedule_and_leave.txt",
+            "eligibility_and_selection.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 0.5,
+          "ndcg_at_k": 0.6309,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "policy-002",
+          "scenario": "answerable",
+          "question": "When and how is orientation held?",
+          "expected_sources": [
+            "internship_handbook.txt"
+          ],
+          "top_sources": [
+            "work_schedule_and_leave.txt",
+            "milestones_and_assessment.txt",
+            "internship_handbook.txt",
+            "rag_architecture_and_evaluation.txt",
+            "security_and_external_llm_use.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 0.3333,
+          "ndcg_at_k": 0.5,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "policy-003",
+          "scenario": "answerable",
+          "question": "How many hours must an intern work, and what are the core collaboration hours?",
+          "expected_sources": [
+            "internship_handbook.txt",
+            "work_schedule_and_leave.txt"
+          ],
+          "top_sources": [
+            "work_schedule_and_leave.txt",
+            "compute_and_lab_access.txt",
+            "internship_handbook.txt",
+            "mentoring_and_communication.txt",
+            "stipend_and_expenses.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 0.9197,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "eligibility-001",
+          "scenario": "answerable",
+          "question": "Can a currently enrolled master's student in statistics apply?",
+          "expected_sources": [
+            "eligibility_and_selection.txt"
+          ],
+          "top_sources": [
+            "eligibility_and_selection.txt",
+            "research_ethics_and_data_governance.txt",
+            "security_and_external_llm_use.txt",
+            "internship_handbook.txt",
+            "compute_and_lab_access.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "eligibility-002",
+          "scenario": "answerable",
+          "question": "Are undergraduate or doctoral students eligible for this internship track?",
+          "expected_sources": [
+            "eligibility_and_selection.txt"
+          ],
+          "top_sources": [
+            "eligibility_and_selection.txt",
+            "internship_handbook.txt",
+            "publication_ip_and_open_source.txt",
+            "compute_and_lab_access.txt",
+            "archived_2025_faq.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "eligibility-003",
+          "scenario": "answerable",
+          "question": "Is a GRE score or previous publication required?",
+          "expected_sources": [
+            "eligibility_and_selection.txt"
+          ],
+          "top_sources": [
+            "eligibility_and_selection.txt",
+            "milestones_and_assessment.txt",
+            "publication_ip_and_open_source.txt",
+            "rag_architecture_and_evaluation.txt",
+            "archived_2025_faq.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "funding-001",
+          "scenario": "answerable",
+          "question": "What is the monthly stipend for a full-time 2026 intern?",
+          "expected_sources": [
+            "stipend_and_expenses.txt"
+          ],
+          "top_sources": [
+            "stipend_and_expenses.txt",
+            "archived_2025_faq.txt",
+            "work_schedule_and_leave.txt",
+            "internship_handbook.txt",
+            "compute_and_lab_access.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "funding-002",
+          "scenario": "answerable",
+          "question": "How is the stipend paid?",
+          "expected_sources": [
+            "stipend_and_expenses.txt"
+          ],
+          "top_sources": [
+            "stipend_and_expenses.txt",
+            "archived_2025_faq.txt",
+            "publication_ip_and_open_source.txt",
+            "work_schedule_and_leave.txt",
+            "milestones_and_assessment.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "funding-003",
+          "scenario": "answerable",
+          "question": "What is the maximum reimbursement for pre-approved domestic travel?",
+          "expected_sources": [
+            "stipend_and_expenses.txt"
+          ],
+          "top_sources": [
+            "stipend_and_expenses.txt",
+            "archived_2025_faq.txt",
+            "milestones_and_assessment.txt",
+            "work_schedule_and_leave.txt",
+            "internship_handbook.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "funding-004",
+          "scenario": "answerable",
+          "question": "Does the internship stipend include housing and meals?",
+          "expected_sources": [
+            "stipend_and_expenses.txt"
+          ],
+          "top_sources": [
+            "stipend_and_expenses.txt",
+            "archived_2025_faq.txt",
+            "work_schedule_and_leave.txt",
+            "internship_handbook.txt",
+            "publication_ip_and_open_source.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "schedule-001",
+          "scenario": "answerable",
+          "question": "Which days must interns normally attend campus?",
+          "expected_sources": [
+            "work_schedule_and_leave.txt"
+          ],
+          "top_sources": [
+            "work_schedule_and_leave.txt",
+            "mentoring_and_communication.txt",
+            "internship_handbook.txt",
+            "compute_and_lab_access.txt",
+            "stipend_and_expenses.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "schedule-002",
+          "scenario": "answerable",
+          "question": "How many personal-leave days are available in Summer 2026?",
+          "expected_sources": [
+            "work_schedule_and_leave.txt"
+          ],
+          "top_sources": [
+            "archived_2025_faq.txt",
+            "work_schedule_and_leave.txt",
+            "stipend_and_expenses.txt",
+            "compute_and_lab_access.txt",
+            "milestones_and_assessment.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 0.5,
+          "ndcg_at_k": 0.6309,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "milestone-001",
+          "scenario": "answerable",
+          "question": "When is the project charter due?",
+          "expected_sources": [
+            "milestones_and_assessment.txt"
+          ],
+          "top_sources": [
+            "milestones_and_assessment.txt",
+            "compute_and_lab_access.txt",
+            "internship_handbook.txt",
+            "publication_ip_and_open_source.txt",
+            "mentoring_and_communication.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "milestone-002",
+          "scenario": "answerable",
+          "question": "What must be submitted by 7 August?",
+          "expected_sources": [
+            "milestones_and_assessment.txt"
+          ],
+          "top_sources": [
+            "milestones_and_assessment.txt",
+            "eligibility_and_selection.txt",
+            "publication_ip_and_open_source.txt",
+            "work_schedule_and_leave.txt",
+            "compute_and_lab_access.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "milestone-003",
+          "scenario": "answerable",
+          "question": "When are the final written report and reproducibility appendix due?",
+          "expected_sources": [
+            "milestones_and_assessment.txt"
+          ],
+          "top_sources": [
+            "milestones_and_assessment.txt",
+            "publication_ip_and_open_source.txt",
+            "rag_architecture_and_evaluation.txt",
+            "archived_2025_faq.txt",
+            "research_ethics_and_data_governance.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "milestone-004",
+          "scenario": "answerable",
+          "question": "What is the deadline for the weekly progress update?",
+          "expected_sources": [
+            "milestones_and_assessment.txt"
+          ],
+          "top_sources": [
+            "milestones_and_assessment.txt",
+            "work_schedule_and_leave.txt",
+            "compute_and_lab_access.txt",
+            "mentoring_and_communication.txt",
+            "archived_2025_faq.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "ethics-001",
+          "scenario": "answerable",
+          "question": "Can a team begin analysing identifiable participant interviews after mentor approval but before ethics approval?",
+          "expected_sources": [
+            "research_ethics_and_data_governance.txt"
+          ],
+          "top_sources": [
+            "research_ethics_and_data_governance.txt",
+            "mentoring_and_communication.txt",
+            "publication_ip_and_open_source.txt",
+            "stipend_and_expenses.txt",
+            "internship_handbook.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "ethics-002",
+          "scenario": "answerable",
+          "question": "Does a public fully anonymized benchmark dataset always require a new ethics review?",
+          "expected_sources": [
+            "research_ethics_and_data_governance.txt"
+          ],
+          "top_sources": [
+            "research_ethics_and_data_governance.txt",
+            "publication_ip_and_open_source.txt",
+            "rag_architecture_and_evaluation.txt",
+            "security_and_external_llm_use.txt",
+            "mentoring_and_communication.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "security-001",
+          "scenario": "answerable",
+          "question": "What kinds of data may be sent to an external LLM API without a special data-processing approval?",
+          "expected_sources": [
+            "security_and_external_llm_use.txt"
+          ],
+          "top_sources": [
+            "security_and_external_llm_use.txt",
+            "research_ethics_and_data_governance.txt",
+            "publication_ip_and_open_source.txt",
+            "compute_and_lab_access.txt",
+            "rag_architecture_and_evaluation.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "security-002",
+          "scenario": "answerable",
+          "question": "Where should API keys and access tokens be stored?",
+          "expected_sources": [
+            "security_and_external_llm_use.txt"
+          ],
+          "top_sources": [
+            "security_and_external_llm_use.txt",
+            "compute_and_lab_access.txt",
+            "internship_handbook.txt",
+            "research_ethics_and_data_governance.txt",
+            "publication_ip_and_open_source.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "security-003",
+          "scenario": "answerable",
+          "question": "How quickly must an exposed repository secret be reported?",
+          "expected_sources": [
+            "security_and_external_llm_use.txt"
+          ],
+          "top_sources": [
+            "security_and_external_llm_use.txt",
+            "research_ethics_and_data_governance.txt",
+            "publication_ip_and_open_source.txt",
+            "compute_and_lab_access.txt",
+            "rag_architecture_and_evaluation.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "compute-001",
+          "scenario": "answerable",
+          "question": "What weekly GPU allocation does each internship team receive?",
+          "expected_sources": [
+            "compute_and_lab_access.txt"
+          ],
+          "top_sources": [
+            "compute_and_lab_access.txt",
+            "work_schedule_and_leave.txt",
+            "stipend_and_expenses.txt",
+            "internship_handbook.txt",
+            "eligibility_and_selection.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "compute-002",
+          "scenario": "answerable",
+          "question": "How much encrypted project storage is allocated to a team?",
+          "expected_sources": [
+            "compute_and_lab_access.txt"
+          ],
+          "top_sources": [
+            "compute_and_lab_access.txt",
+            "security_and_external_llm_use.txt",
+            "research_ethics_and_data_governance.txt",
+            "mentoring_and_communication.txt",
+            "publication_ip_and_open_source.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "publication-001",
+          "scenario": "answerable",
+          "question": "How long does the Research Office have for internal disclosure review?",
+          "expected_sources": [
+            "publication_ip_and_open_source.txt"
+          ],
+          "top_sources": [
+            "publication_ip_and_open_source.txt",
+            "research_ethics_and_data_governance.txt",
+            "milestones_and_assessment.txt",
+            "security_and_external_llm_use.txt",
+            "compute_and_lab_access.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "publication-002",
+          "scenario": "answerable",
+          "question": "Which open-source licence should normally be used for internship source code?",
+          "expected_sources": [
+            "publication_ip_and_open_source.txt"
+          ],
+          "top_sources": [
+            "publication_ip_and_open_source.txt",
+            "internship_handbook.txt",
+            "compute_and_lab_access.txt",
+            "work_schedule_and_leave.txt",
+            "stipend_and_expenses.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "mentoring-001",
+          "scenario": "answerable",
+          "question": "How often should an intern have a one-to-one meeting with a mentor?",
+          "expected_sources": [
+            "mentoring_and_communication.txt"
+          ],
+          "top_sources": [
+            "mentoring_and_communication.txt",
+            "work_schedule_and_leave.txt",
+            "internship_handbook.txt",
+            "compute_and_lab_access.txt",
+            "stipend_and_expenses.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "mentoring-002",
+          "scenario": "answerable",
+          "question": "What should an intern do if the day-to-day mentor has not answered a routine blocker for two working days?",
+          "expected_sources": [
+            "mentoring_and_communication.txt"
+          ],
+          "top_sources": [
+            "mentoring_and_communication.txt",
+            "work_schedule_and_leave.txt",
+            "internship_handbook.txt",
+            "compute_and_lab_access.txt",
+            "archived_2025_faq.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "rag-eval-001",
+          "scenario": "answerable",
+          "question": "Which retrieval configurations are mandatory in the project comparison?",
+          "expected_sources": [
+            "rag_architecture_and_evaluation.txt"
+          ],
+          "top_sources": [
+            "rag_architecture_and_evaluation.txt",
+            "rag_background.txt",
+            "milestones_and_assessment.txt",
+            "eligibility_and_selection.txt",
+            "publication_ip_and_open_source.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "rag-eval-002",
+          "scenario": "answerable",
+          "question": "Which source-level retrieval metrics must the benchmark report?",
+          "expected_sources": [
+            "rag_architecture_and_evaluation.txt"
+          ],
+          "top_sources": [
+            "rag_architecture_and_evaluation.txt",
+            "rag_background.txt",
+            "milestones_and_assessment.txt",
+            "publication_ip_and_open_source.txt",
+            "eligibility_and_selection.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "rag-eval-003",
+          "scenario": "answerable",
+          "question": "What chunk size, overlap, top-k, embedding dimension, and seed define the official baseline?",
+          "expected_sources": [
+            "rag_architecture_and_evaluation.txt"
+          ],
+          "top_sources": [
+            "rag_architecture_and_evaluation.txt",
+            "rag_background.txt",
+            "milestones_and_assessment.txt",
+            "eligibility_and_selection.txt",
+            "compute_and_lab_access.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "ambiguous-001",
+          "scenario": "ambiguous",
+          "question": "When is the report due?",
+          "expected_sources": [
+            "milestones_and_assessment.txt"
+          ],
+          "top_sources": [
+            "milestones_and_assessment.txt",
+            "publication_ip_and_open_source.txt",
+            "rag_architecture_and_evaluation.txt",
+            "archived_2025_faq.txt",
+            "work_schedule_and_leave.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "ambiguous-002",
+          "scenario": "ambiguous",
+          "question": "What is the deadline for reporting an incident?",
+          "expected_sources": [
+            "research_ethics_and_data_governance.txt",
+            "security_and_external_llm_use.txt"
+          ],
+          "top_sources": [
+            "research_ethics_and_data_governance.txt",
+            "milestones_and_assessment.txt",
+            "mentoring_and_communication.txt",
+            "rag_architecture_and_evaluation.txt",
+            "work_schedule_and_leave.txt"
+          ],
+          "recall_at_k": 0.5,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 0.6131,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "ambiguous-003",
+          "scenario": "ambiguous",
+          "question": "Can project data be shared in the chat workspace?",
+          "expected_sources": [
+            "mentoring_and_communication.txt",
+            "security_and_external_llm_use.txt"
+          ],
+          "top_sources": [
+            "mentoring_and_communication.txt",
+            "compute_and_lab_access.txt",
+            "security_and_external_llm_use.txt",
+            "research_ethics_and_data_governance.txt",
+            "publication_ip_and_open_source.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 0.9197,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "conflict-001",
+          "scenario": "conflicting",
+          "question": "One document says the stipend is INR 35,000 and another says INR 45,000. Which amount applies in 2026?",
+          "expected_sources": [
+            "archived_2025_faq.txt",
+            "stipend_and_expenses.txt"
+          ],
+          "top_sources": [
+            "stipend_and_expenses.txt",
+            "archived_2025_faq.txt",
+            "milestones_and_assessment.txt",
+            "rag_architecture_and_evaluation.txt",
+            "eligibility_and_selection.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "conflict-002",
+          "scenario": "conflicting",
+          "question": "Is the current internship 35 or 40 hours per week?",
+          "expected_sources": [
+            "archived_2025_faq.txt",
+            "work_schedule_and_leave.txt"
+          ],
+          "top_sources": [
+            "work_schedule_and_leave.txt",
+            "compute_and_lab_access.txt",
+            "internship_handbook.txt",
+            "stipend_and_expenses.txt",
+            "archived_2025_faq.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 0.8503,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "conflict-003",
+          "scenario": "conflicting",
+          "question": "Does the 2026 programme end on 8 August or 21 August?",
+          "expected_sources": [
+            "archived_2025_faq.txt",
+            "internship_handbook.txt"
+          ],
+          "top_sources": [
+            "milestones_and_assessment.txt",
+            "archived_2025_faq.txt",
+            "work_schedule_and_leave.txt",
+            "internship_handbook.txt",
+            "eligibility_and_selection.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 0.5,
+          "ndcg_at_k": 0.6509,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "unanswerable-001",
+          "scenario": "unanswerable",
+          "question": "Which cafeteria meal plan is assigned to interns?",
+          "expected_sources": [],
+          "top_sources": [
+            "work_schedule_and_leave.txt",
+            "internship_handbook.txt",
+            "stipend_and_expenses.txt",
+            "mentoring_and_communication.txt",
+            "archived_2025_faq.txt"
+          ],
+          "recall_at_k": null,
+          "reciprocal_rank": null,
+          "ndcg_at_k": null,
+          "abstained": false,
+          "abstention_correct": false
+        },
+        {
+          "id": "unanswerable-002",
+          "scenario": "unanswerable",
+          "question": "What health-insurance policy number is issued to each intern?",
+          "expected_sources": [],
+          "top_sources": [
+            "internship_handbook.txt",
+            "archived_2025_faq.txt",
+            "stipend_and_expenses.txt",
+            "work_schedule_and_leave.txt",
+            "eligibility_and_selection.txt"
+          ],
+          "recall_at_k": null,
+          "reciprocal_rank": null,
+          "ndcg_at_k": null,
+          "abstained": false,
+          "abstention_correct": false
+        },
+        {
+          "id": "unanswerable-003",
+          "scenario": "unanswerable",
+          "question": "Does the university sponsor an employment visa after the internship?",
+          "expected_sources": [],
+          "top_sources": [
+            "stipend_and_expenses.txt",
+            "publication_ip_and_open_source.txt",
+            "internship_handbook.txt",
+            "work_schedule_and_leave.txt",
+            "eligibility_and_selection.txt"
+          ],
+          "recall_at_k": null,
+          "reciprocal_rank": null,
+          "ndcg_at_k": null,
+          "abstained": false,
+          "abstention_correct": false
+        },
+        {
+          "id": "unanswerable-004",
+          "scenario": "unanswerable",
+          "question": "What parking permit colour should interns request?",
+          "expected_sources": [],
+          "top_sources": [
+            "internship_handbook.txt",
+            "archived_2025_faq.txt",
+            "work_schedule_and_leave.txt",
+            "eligibility_and_selection.txt",
+            "compute_and_lab_access.txt"
+          ],
+          "recall_at_k": null,
+          "reciprocal_rank": null,
+          "ndcg_at_k": null,
+          "abstained": false,
+          "abstention_correct": false
+        },
+        {
+          "id": "unanswerable-005",
+          "scenario": "unanswerable",
+          "question": "How many qubits are available on the university quantum computer?",
+          "expected_sources": [],
+          "top_sources": [
+            "compute_and_lab_access.txt",
+            "eligibility_and_selection.txt",
+            "internship_handbook.txt",
+            "security_and_external_llm_use.txt",
+            "publication_ip_and_open_source.txt"
+          ],
+          "recall_at_k": null,
+          "reciprocal_rank": null,
+          "ndcg_at_k": null,
+          "abstained": false,
+          "abstention_correct": false
+        }
+      ]
+    },
+    {
+      "name": "keyword_only",
+      "summary": {
+        "cases": 41,
+        "retrieval_cases": 36,
+        "unanswerable_cases": 5,
+        "recall_at_k": 1.0,
+        "mrr": 0.9306,
+        "ndcg_at_k": 0.9441,
+        "unanswerable_abstention_accuracy": 0.0,
+        "benchmark_score": 0.829
+      },
+      "by_scenario": {
+        "ambiguous": {
+          "cases": 3,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_k": 0.9732,
+          "abstention_accuracy": null
+        },
+        "answerable": {
+          "cases": 30,
+          "recall_at_k": 1.0,
+          "mrr": 0.9333,
+          "ndcg_at_k": 0.9508,
+          "abstention_accuracy": null
+        },
+        "conflicting": {
+          "cases": 3,
+          "recall_at_k": 1.0,
+          "mrr": 0.8333,
+          "ndcg_at_k": 0.8479,
+          "abstention_accuracy": null
+        },
+        "unanswerable": {
+          "cases": 5,
+          "recall_at_k": null,
+          "mrr": null,
+          "ndcg_at_k": null,
+          "abstention_accuracy": 0.0
+        }
+      },
+      "cases": [
+        {
+          "id": "policy-001",
+          "scenario": "answerable",
+          "question": "What are the official start and end dates for the 2026 internship?",
+          "expected_sources": [
+            "internship_handbook.txt"
+          ],
+          "top_sources": [
+            "internship_handbook.txt",
+            "eligibility_and_selection.txt",
+            "rag_architecture_and_evaluation.txt",
+            "archived_2025_faq.txt",
+            "compute_and_lab_access.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "policy-002",
+          "scenario": "answerable",
+          "question": "When and how is orientation held?",
+          "expected_sources": [
+            "internship_handbook.txt"
+          ],
+          "top_sources": [
+            "internship_handbook.txt",
+            "work_schedule_and_leave.txt",
+            "milestones_and_assessment.txt",
+            "rag_architecture_and_evaluation.txt",
+            "security_and_external_llm_use.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "policy-003",
+          "scenario": "answerable",
+          "question": "How many hours must an intern work, and what are the core collaboration hours?",
+          "expected_sources": [
+            "internship_handbook.txt",
+            "work_schedule_and_leave.txt"
+          ],
+          "top_sources": [
+            "work_schedule_and_leave.txt",
+            "internship_handbook.txt",
+            "mentoring_and_communication.txt",
+            "stipend_and_expenses.txt",
+            "research_ethics_and_data_governance.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "eligibility-001",
+          "scenario": "answerable",
+          "question": "Can a currently enrolled master's student in statistics apply?",
+          "expected_sources": [
+            "eligibility_and_selection.txt"
+          ],
+          "top_sources": [
+            "eligibility_and_selection.txt",
+            "rag_background.txt",
+            "research_ethics_and_data_governance.txt",
+            "security_and_external_llm_use.txt",
+            "internship_handbook.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "eligibility-002",
+          "scenario": "answerable",
+          "question": "Are undergraduate or doctoral students eligible for this internship track?",
+          "expected_sources": [
+            "eligibility_and_selection.txt"
+          ],
+          "top_sources": [
+            "eligibility_and_selection.txt",
+            "internship_handbook.txt",
+            "publication_ip_and_open_source.txt",
+            "compute_and_lab_access.txt",
+            "archived_2025_faq.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "eligibility-003",
+          "scenario": "answerable",
+          "question": "Is a GRE score or previous publication required?",
+          "expected_sources": [
+            "eligibility_and_selection.txt"
+          ],
+          "top_sources": [
+            "eligibility_and_selection.txt",
+            "milestones_and_assessment.txt",
+            "publication_ip_and_open_source.txt",
+            "work_schedule_and_leave.txt",
+            "rag_architecture_and_evaluation.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "funding-001",
+          "scenario": "answerable",
+          "question": "What is the monthly stipend for a full-time 2026 intern?",
+          "expected_sources": [
+            "stipend_and_expenses.txt"
+          ],
+          "top_sources": [
+            "stipend_and_expenses.txt",
+            "archived_2025_faq.txt",
+            "mentoring_and_communication.txt",
+            "work_schedule_and_leave.txt",
+            "internship_handbook.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "funding-002",
+          "scenario": "answerable",
+          "question": "How is the stipend paid?",
+          "expected_sources": [
+            "stipend_and_expenses.txt"
+          ],
+          "top_sources": [
+            "archived_2025_faq.txt",
+            "stipend_and_expenses.txt",
+            "publication_ip_and_open_source.txt",
+            "work_schedule_and_leave.txt",
+            "milestones_and_assessment.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 0.5,
+          "ndcg_at_k": 0.6309,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "funding-003",
+          "scenario": "answerable",
+          "question": "What is the maximum reimbursement for pre-approved domestic travel?",
+          "expected_sources": [
+            "stipend_and_expenses.txt"
+          ],
+          "top_sources": [
+            "archived_2025_faq.txt",
+            "stipend_and_expenses.txt",
+            "milestones_and_assessment.txt",
+            "work_schedule_and_leave.txt",
+            "internship_handbook.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 0.5,
+          "ndcg_at_k": 0.6309,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "funding-004",
+          "scenario": "answerable",
+          "question": "Does the internship stipend include housing and meals?",
+          "expected_sources": [
+            "stipend_and_expenses.txt"
+          ],
+          "top_sources": [
+            "stipend_and_expenses.txt",
+            "rag_architecture_and_evaluation.txt",
+            "eligibility_and_selection.txt",
+            "publication_ip_and_open_source.txt",
+            "archived_2025_faq.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "schedule-001",
+          "scenario": "answerable",
+          "question": "Which days must interns normally attend campus?",
+          "expected_sources": [
+            "work_schedule_and_leave.txt"
+          ],
+          "top_sources": [
+            "work_schedule_and_leave.txt",
+            "archived_2025_faq.txt",
+            "stipend_and_expenses.txt",
+            "research_ethics_and_data_governance.txt",
+            "compute_and_lab_access.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "schedule-002",
+          "scenario": "answerable",
+          "question": "How many personal-leave days are available in Summer 2026?",
+          "expected_sources": [
+            "work_schedule_and_leave.txt"
+          ],
+          "top_sources": [
+            "archived_2025_faq.txt",
+            "work_schedule_and_leave.txt",
+            "compute_and_lab_access.txt",
+            "mentoring_and_communication.txt",
+            "internship_handbook.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 0.5,
+          "ndcg_at_k": 0.6309,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "milestone-001",
+          "scenario": "answerable",
+          "question": "When is the project charter due?",
+          "expected_sources": [
+            "milestones_and_assessment.txt"
+          ],
+          "top_sources": [
+            "milestones_and_assessment.txt",
+            "internship_handbook.txt",
+            "research_ethics_and_data_governance.txt",
+            "rag_architecture_and_evaluation.txt",
+            "compute_and_lab_access.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "milestone-002",
+          "scenario": "answerable",
+          "question": "What must be submitted by 7 August?",
+          "expected_sources": [
+            "milestones_and_assessment.txt"
+          ],
+          "top_sources": [
+            "stipend_and_expenses.txt",
+            "milestones_and_assessment.txt",
+            "work_schedule_and_leave.txt",
+            "archived_2025_faq.txt",
+            "internship_handbook.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 0.5,
+          "ndcg_at_k": 0.6309,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "milestone-003",
+          "scenario": "answerable",
+          "question": "When are the final written report and reproducibility appendix due?",
+          "expected_sources": [
+            "milestones_and_assessment.txt"
+          ],
+          "top_sources": [
+            "milestones_and_assessment.txt",
+            "internship_handbook.txt",
+            "research_ethics_and_data_governance.txt",
+            "security_and_external_llm_use.txt",
+            "work_schedule_and_leave.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "milestone-004",
+          "scenario": "answerable",
+          "question": "What is the deadline for the weekly progress update?",
+          "expected_sources": [
+            "milestones_and_assessment.txt"
+          ],
+          "top_sources": [
+            "milestones_and_assessment.txt",
+            "research_ethics_and_data_governance.txt",
+            "work_schedule_and_leave.txt",
+            "compute_and_lab_access.txt",
+            "mentoring_and_communication.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "ethics-001",
+          "scenario": "answerable",
+          "question": "Can a team begin analysing identifiable participant interviews after mentor approval but before ethics approval?",
+          "expected_sources": [
+            "research_ethics_and_data_governance.txt"
+          ],
+          "top_sources": [
+            "research_ethics_and_data_governance.txt",
+            "stipend_and_expenses.txt",
+            "rag_background.txt",
+            "compute_and_lab_access.txt",
+            "security_and_external_llm_use.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "ethics-002",
+          "scenario": "answerable",
+          "question": "Does a public fully anonymized benchmark dataset always require a new ethics review?",
+          "expected_sources": [
+            "research_ethics_and_data_governance.txt"
+          ],
+          "top_sources": [
+            "research_ethics_and_data_governance.txt",
+            "publication_ip_and_open_source.txt",
+            "stipend_and_expenses.txt",
+            "internship_handbook.txt",
+            "milestones_and_assessment.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "security-001",
+          "scenario": "answerable",
+          "question": "What kinds of data may be sent to an external LLM API without a special data-processing approval?",
+          "expected_sources": [
+            "security_and_external_llm_use.txt"
+          ],
+          "top_sources": [
+            "security_and_external_llm_use.txt",
+            "mentoring_and_communication.txt",
+            "research_ethics_and_data_governance.txt",
+            "eligibility_and_selection.txt",
+            "compute_and_lab_access.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "security-002",
+          "scenario": "answerable",
+          "question": "Where should API keys and access tokens be stored?",
+          "expected_sources": [
+            "security_and_external_llm_use.txt"
+          ],
+          "top_sources": [
+            "security_and_external_llm_use.txt",
+            "compute_and_lab_access.txt",
+            "stipend_and_expenses.txt",
+            "research_ethics_and_data_governance.txt",
+            "internship_handbook.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "security-003",
+          "scenario": "answerable",
+          "question": "How quickly must an exposed repository secret be reported?",
+          "expected_sources": [
+            "security_and_external_llm_use.txt"
+          ],
+          "top_sources": [
+            "security_and_external_llm_use.txt",
+            "publication_ip_and_open_source.txt",
+            "rag_architecture_and_evaluation.txt",
+            "mentoring_and_communication.txt",
+            "research_ethics_and_data_governance.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "compute-001",
+          "scenario": "answerable",
+          "question": "What weekly GPU allocation does each internship team receive?",
+          "expected_sources": [
+            "compute_and_lab_access.txt"
+          ],
+          "top_sources": [
+            "compute_and_lab_access.txt",
+            "milestones_and_assessment.txt",
+            "internship_handbook.txt",
+            "publication_ip_and_open_source.txt",
+            "rag_architecture_and_evaluation.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "compute-002",
+          "scenario": "answerable",
+          "question": "How much encrypted project storage is allocated to a team?",
+          "expected_sources": [
+            "compute_and_lab_access.txt"
+          ],
+          "top_sources": [
+            "compute_and_lab_access.txt",
+            "research_ethics_and_data_governance.txt",
+            "internship_handbook.txt",
+            "rag_architecture_and_evaluation.txt",
+            "mentoring_and_communication.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "publication-001",
+          "scenario": "answerable",
+          "question": "How long does the Research Office have for internal disclosure review?",
+          "expected_sources": [
+            "publication_ip_and_open_source.txt"
+          ],
+          "top_sources": [
+            "publication_ip_and_open_source.txt",
+            "research_ethics_and_data_governance.txt",
+            "eligibility_and_selection.txt",
+            "internship_handbook.txt",
+            "mentoring_and_communication.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "publication-002",
+          "scenario": "answerable",
+          "question": "Which open-source licence should normally be used for internship source code?",
+          "expected_sources": [
+            "publication_ip_and_open_source.txt"
+          ],
+          "top_sources": [
+            "publication_ip_and_open_source.txt",
+            "archived_2025_faq.txt",
+            "work_schedule_and_leave.txt",
+            "research_ethics_and_data_governance.txt",
+            "eligibility_and_selection.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "mentoring-001",
+          "scenario": "answerable",
+          "question": "How often should an intern have a one-to-one meeting with a mentor?",
+          "expected_sources": [
+            "mentoring_and_communication.txt"
+          ],
+          "top_sources": [
+            "mentoring_and_communication.txt",
+            "eligibility_and_selection.txt",
+            "rag_background.txt",
+            "stipend_and_expenses.txt",
+            "work_schedule_and_leave.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "mentoring-002",
+          "scenario": "answerable",
+          "question": "What should an intern do if the day-to-day mentor has not answered a routine blocker for two working days?",
+          "expected_sources": [
+            "mentoring_and_communication.txt"
+          ],
+          "top_sources": [
+            "mentoring_and_communication.txt",
+            "work_schedule_and_leave.txt",
+            "security_and_external_llm_use.txt",
+            "internship_handbook.txt",
+            "compute_and_lab_access.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "rag-eval-001",
+          "scenario": "answerable",
+          "question": "Which retrieval configurations are mandatory in the project comparison?",
+          "expected_sources": [
+            "rag_architecture_and_evaluation.txt"
+          ],
+          "top_sources": [
+            "rag_architecture_and_evaluation.txt",
+            "rag_background.txt",
+            "archived_2025_faq.txt",
+            "research_ethics_and_data_governance.txt",
+            "internship_handbook.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "rag-eval-002",
+          "scenario": "answerable",
+          "question": "Which source-level retrieval metrics must the benchmark report?",
+          "expected_sources": [
+            "rag_architecture_and_evaluation.txt"
+          ],
+          "top_sources": [
+            "rag_architecture_and_evaluation.txt",
+            "research_ethics_and_data_governance.txt",
+            "rag_background.txt",
+            "milestones_and_assessment.txt",
+            "security_and_external_llm_use.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "rag-eval-003",
+          "scenario": "answerable",
+          "question": "What chunk size, overlap, top-k, embedding dimension, and seed define the official baseline?",
+          "expected_sources": [
+            "rag_architecture_and_evaluation.txt"
+          ],
+          "top_sources": [
+            "rag_architecture_and_evaluation.txt",
+            "publication_ip_and_open_source.txt",
+            "milestones_and_assessment.txt",
+            "rag_background.txt",
+            "eligibility_and_selection.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "ambiguous-001",
+          "scenario": "ambiguous",
+          "question": "When is the report due?",
+          "expected_sources": [
+            "milestones_and_assessment.txt"
+          ],
+          "top_sources": [
+            "milestones_and_assessment.txt",
+            "internship_handbook.txt",
+            "rag_architecture_and_evaluation.txt",
+            "security_and_external_llm_use.txt",
+            "publication_ip_and_open_source.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "ambiguous-002",
+          "scenario": "ambiguous",
+          "question": "What is the deadline for reporting an incident?",
+          "expected_sources": [
+            "research_ethics_and_data_governance.txt",
+            "security_and_external_llm_use.txt"
+          ],
+          "top_sources": [
+            "research_ethics_and_data_governance.txt",
+            "mentoring_and_communication.txt",
+            "security_and_external_llm_use.txt",
+            "rag_architecture_and_evaluation.txt",
+            "milestones_and_assessment.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 0.9197,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "ambiguous-003",
+          "scenario": "ambiguous",
+          "question": "Can project data be shared in the chat workspace?",
+          "expected_sources": [
+            "mentoring_and_communication.txt",
+            "security_and_external_llm_use.txt"
+          ],
+          "top_sources": [
+            "mentoring_and_communication.txt",
+            "security_and_external_llm_use.txt",
+            "rag_background.txt",
+            "compute_and_lab_access.txt",
+            "research_ethics_and_data_governance.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "conflict-001",
+          "scenario": "conflicting",
+          "question": "One document says the stipend is INR 35,000 and another says INR 45,000. Which amount applies in 2026?",
+          "expected_sources": [
+            "archived_2025_faq.txt",
+            "stipend_and_expenses.txt"
+          ],
+          "top_sources": [
+            "stipend_and_expenses.txt",
+            "archived_2025_faq.txt",
+            "security_and_external_llm_use.txt",
+            "internship_handbook.txt",
+            "work_schedule_and_leave.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "conflict-002",
+          "scenario": "conflicting",
+          "question": "Is the current internship 35 or 40 hours per week?",
+          "expected_sources": [
+            "archived_2025_faq.txt",
+            "work_schedule_and_leave.txt"
+          ],
+          "top_sources": [
+            "archived_2025_faq.txt",
+            "internship_handbook.txt",
+            "work_schedule_and_leave.txt",
+            "compute_and_lab_access.txt",
+            "rag_architecture_and_evaluation.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 0.9197,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "conflict-003",
+          "scenario": "conflicting",
+          "question": "Does the 2026 programme end on 8 August or 21 August?",
+          "expected_sources": [
+            "archived_2025_faq.txt",
+            "internship_handbook.txt"
+          ],
+          "top_sources": [
+            "work_schedule_and_leave.txt",
+            "internship_handbook.txt",
+            "milestones_and_assessment.txt",
+            "publication_ip_and_open_source.txt",
+            "archived_2025_faq.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 0.5,
+          "ndcg_at_k": 0.6241,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "unanswerable-001",
+          "scenario": "unanswerable",
+          "question": "Which cafeteria meal plan is assigned to interns?",
+          "expected_sources": [],
+          "top_sources": [
+            "internship_handbook.txt",
+            "research_ethics_and_data_governance.txt",
+            "milestones_and_assessment.txt",
+            "work_schedule_and_leave.txt",
+            "stipend_and_expenses.txt"
+          ],
+          "recall_at_k": null,
+          "reciprocal_rank": null,
+          "ndcg_at_k": null,
+          "abstained": false,
+          "abstention_correct": false
+        },
+        {
+          "id": "unanswerable-002",
+          "scenario": "unanswerable",
+          "question": "What health-insurance policy number is issued to each intern?",
+          "expected_sources": [],
+          "top_sources": [
+            "stipend_and_expenses.txt",
+            "internship_handbook.txt",
+            "mentoring_and_communication.txt",
+            "work_schedule_and_leave.txt",
+            "milestones_and_assessment.txt"
+          ],
+          "recall_at_k": null,
+          "reciprocal_rank": null,
+          "ndcg_at_k": null,
+          "abstained": false,
+          "abstention_correct": false
+        },
+        {
+          "id": "unanswerable-003",
+          "scenario": "unanswerable",
+          "question": "Does the university sponsor an employment visa after the internship?",
+          "expected_sources": [],
+          "top_sources": [
+            "publication_ip_and_open_source.txt",
+            "stipend_and_expenses.txt",
+            "internship_handbook.txt",
+            "compute_and_lab_access.txt",
+            "research_ethics_and_data_governance.txt"
+          ],
+          "recall_at_k": null,
+          "reciprocal_rank": null,
+          "ndcg_at_k": null,
+          "abstained": false,
+          "abstention_correct": false
+        },
+        {
+          "id": "unanswerable-004",
+          "scenario": "unanswerable",
+          "question": "What parking permit colour should interns request?",
+          "expected_sources": [],
+          "top_sources": [
+            "compute_and_lab_access.txt",
+            "eligibility_and_selection.txt",
+            "work_schedule_and_leave.txt",
+            "stipend_and_expenses.txt",
+            "publication_ip_and_open_source.txt"
+          ],
+          "recall_at_k": null,
+          "reciprocal_rank": null,
+          "ndcg_at_k": null,
+          "abstained": false,
+          "abstention_correct": false
+        },
+        {
+          "id": "unanswerable-005",
+          "scenario": "unanswerable",
+          "question": "How many qubits are available on the university quantum computer?",
+          "expected_sources": [],
+          "top_sources": [
+            "eligibility_and_selection.txt",
+            "compute_and_lab_access.txt",
+            "archived_2025_faq.txt",
+            "work_schedule_and_leave.txt",
+            "stipend_and_expenses.txt"
+          ],
+          "recall_at_k": null,
+          "reciprocal_rank": null,
+          "ndcg_at_k": null,
+          "abstained": false,
+          "abstention_correct": false
+        }
+      ]
+    },
+    {
+      "name": "hybrid",
+      "summary": {
+        "cases": 41,
+        "retrieval_cases": 36,
+        "unanswerable_cases": 5,
+        "recall_at_k": 1.0,
+        "mrr": 0.9236,
+        "ndcg_at_k": 0.9408,
+        "unanswerable_abstention_accuracy": 0.0,
+        "benchmark_score": 0.826
+      },
+      "by_scenario": {
+        "ambiguous": {
+          "cases": 3,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg_at_k": 0.9732,
+          "abstention_accuracy": null
+        },
+        "answerable": {
+          "cases": 30,
+          "recall_at_k": 1.0,
+          "mrr": 0.925,
+          "ndcg_at_k": 0.9441,
+          "abstention_accuracy": null
+        },
+        "conflicting": {
+          "cases": 3,
+          "recall_at_k": 1.0,
+          "mrr": 0.8333,
+          "ndcg_at_k": 0.8747,
+          "abstention_accuracy": null
+        },
+        "unanswerable": {
+          "cases": 5,
+          "recall_at_k": null,
+          "mrr": null,
+          "ndcg_at_k": null,
+          "abstention_accuracy": 0.0
+        }
+      },
+      "cases": [
+        {
+          "id": "policy-001",
+          "scenario": "answerable",
+          "question": "What are the official start and end dates for the 2026 internship?",
+          "expected_sources": [
+            "internship_handbook.txt"
+          ],
+          "top_sources": [
+            "internship_handbook.txt",
+            "archived_2025_faq.txt",
+            "eligibility_and_selection.txt",
+            "compute_and_lab_access.txt",
+            "work_schedule_and_leave.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "policy-002",
+          "scenario": "answerable",
+          "question": "When and how is orientation held?",
+          "expected_sources": [
+            "internship_handbook.txt"
+          ],
+          "top_sources": [
+            "internship_handbook.txt",
+            "eligibility_and_selection.txt",
+            "rag_architecture_and_evaluation.txt",
+            "security_and_external_llm_use.txt",
+            "work_schedule_and_leave.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "policy-003",
+          "scenario": "answerable",
+          "question": "How many hours must an intern work, and what are the core collaboration hours?",
+          "expected_sources": [
+            "internship_handbook.txt",
+            "work_schedule_and_leave.txt"
+          ],
+          "top_sources": [
+            "work_schedule_and_leave.txt",
+            "internship_handbook.txt",
+            "mentoring_and_communication.txt",
+            "stipend_and_expenses.txt",
+            "archived_2025_faq.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "eligibility-001",
+          "scenario": "answerable",
+          "question": "Can a currently enrolled master's student in statistics apply?",
+          "expected_sources": [
+            "eligibility_and_selection.txt"
+          ],
+          "top_sources": [
+            "eligibility_and_selection.txt",
+            "research_ethics_and_data_governance.txt",
+            "security_and_external_llm_use.txt",
+            "internship_handbook.txt",
+            "archived_2025_faq.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "eligibility-002",
+          "scenario": "answerable",
+          "question": "Are undergraduate or doctoral students eligible for this internship track?",
+          "expected_sources": [
+            "eligibility_and_selection.txt"
+          ],
+          "top_sources": [
+            "eligibility_and_selection.txt",
+            "internship_handbook.txt",
+            "publication_ip_and_open_source.txt",
+            "compute_and_lab_access.txt",
+            "archived_2025_faq.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "eligibility-003",
+          "scenario": "answerable",
+          "question": "Is a GRE score or previous publication required?",
+          "expected_sources": [
+            "eligibility_and_selection.txt"
+          ],
+          "top_sources": [
+            "eligibility_and_selection.txt",
+            "milestones_and_assessment.txt",
+            "rag_architecture_and_evaluation.txt",
+            "archived_2025_faq.txt",
+            "work_schedule_and_leave.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "funding-001",
+          "scenario": "answerable",
+          "question": "What is the monthly stipend for a full-time 2026 intern?",
+          "expected_sources": [
+            "stipend_and_expenses.txt"
+          ],
+          "top_sources": [
+            "stipend_and_expenses.txt",
+            "archived_2025_faq.txt",
+            "work_schedule_and_leave.txt",
+            "internship_handbook.txt",
+            "mentoring_and_communication.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "funding-002",
+          "scenario": "answerable",
+          "question": "How is the stipend paid?",
+          "expected_sources": [
+            "stipend_and_expenses.txt"
+          ],
+          "top_sources": [
+            "archived_2025_faq.txt",
+            "stipend_and_expenses.txt",
+            "compute_and_lab_access.txt",
+            "eligibility_and_selection.txt",
+            "work_schedule_and_leave.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 0.5,
+          "ndcg_at_k": 0.6309,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "funding-003",
+          "scenario": "answerable",
+          "question": "What is the maximum reimbursement for pre-approved domestic travel?",
+          "expected_sources": [
+            "stipend_and_expenses.txt"
+          ],
+          "top_sources": [
+            "archived_2025_faq.txt",
+            "stipend_and_expenses.txt",
+            "eligibility_and_selection.txt",
+            "compute_and_lab_access.txt",
+            "internship_handbook.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 0.5,
+          "ndcg_at_k": 0.6309,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "funding-004",
+          "scenario": "answerable",
+          "question": "Does the internship stipend include housing and meals?",
+          "expected_sources": [
+            "stipend_and_expenses.txt"
+          ],
+          "top_sources": [
+            "stipend_and_expenses.txt",
+            "archived_2025_faq.txt",
+            "publication_ip_and_open_source.txt",
+            "eligibility_and_selection.txt",
+            "rag_architecture_and_evaluation.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "schedule-001",
+          "scenario": "answerable",
+          "question": "Which days must interns normally attend campus?",
+          "expected_sources": [
+            "work_schedule_and_leave.txt"
+          ],
+          "top_sources": [
+            "work_schedule_and_leave.txt",
+            "compute_and_lab_access.txt",
+            "archived_2025_faq.txt",
+            "stipend_and_expenses.txt",
+            "internship_handbook.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "schedule-002",
+          "scenario": "answerable",
+          "question": "How many personal-leave days are available in Summer 2026?",
+          "expected_sources": [
+            "work_schedule_and_leave.txt"
+          ],
+          "top_sources": [
+            "archived_2025_faq.txt",
+            "work_schedule_and_leave.txt",
+            "compute_and_lab_access.txt",
+            "internship_handbook.txt",
+            "mentoring_and_communication.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 0.5,
+          "ndcg_at_k": 0.6309,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "milestone-001",
+          "scenario": "answerable",
+          "question": "When is the project charter due?",
+          "expected_sources": [
+            "milestones_and_assessment.txt"
+          ],
+          "top_sources": [
+            "milestones_and_assessment.txt",
+            "internship_handbook.txt",
+            "compute_and_lab_access.txt",
+            "publication_ip_and_open_source.txt",
+            "mentoring_and_communication.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "milestone-002",
+          "scenario": "answerable",
+          "question": "What must be submitted by 7 August?",
+          "expected_sources": [
+            "milestones_and_assessment.txt"
+          ],
+          "top_sources": [
+            "work_schedule_and_leave.txt",
+            "archived_2025_faq.txt",
+            "stipend_and_expenses.txt",
+            "milestones_and_assessment.txt",
+            "eligibility_and_selection.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 0.25,
+          "ndcg_at_k": 0.4307,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "milestone-003",
+          "scenario": "answerable",
+          "question": "When are the final written report and reproducibility appendix due?",
+          "expected_sources": [
+            "milestones_and_assessment.txt"
+          ],
+          "top_sources": [
+            "milestones_and_assessment.txt",
+            "internship_handbook.txt",
+            "publication_ip_and_open_source.txt",
+            "compute_and_lab_access.txt",
+            "work_schedule_and_leave.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "milestone-004",
+          "scenario": "answerable",
+          "question": "What is the deadline for the weekly progress update?",
+          "expected_sources": [
+            "milestones_and_assessment.txt"
+          ],
+          "top_sources": [
+            "milestones_and_assessment.txt",
+            "research_ethics_and_data_governance.txt",
+            "compute_and_lab_access.txt",
+            "work_schedule_and_leave.txt",
+            "eligibility_and_selection.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "ethics-001",
+          "scenario": "answerable",
+          "question": "Can a team begin analysing identifiable participant interviews after mentor approval but before ethics approval?",
+          "expected_sources": [
+            "research_ethics_and_data_governance.txt"
+          ],
+          "top_sources": [
+            "research_ethics_and_data_governance.txt",
+            "stipend_and_expenses.txt",
+            "compute_and_lab_access.txt",
+            "mentoring_and_communication.txt",
+            "security_and_external_llm_use.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "ethics-002",
+          "scenario": "answerable",
+          "question": "Does a public fully anonymized benchmark dataset always require a new ethics review?",
+          "expected_sources": [
+            "research_ethics_and_data_governance.txt"
+          ],
+          "top_sources": [
+            "research_ethics_and_data_governance.txt",
+            "publication_ip_and_open_source.txt",
+            "stipend_and_expenses.txt",
+            "milestones_and_assessment.txt",
+            "internship_handbook.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "security-001",
+          "scenario": "answerable",
+          "question": "What kinds of data may be sent to an external LLM API without a special data-processing approval?",
+          "expected_sources": [
+            "security_and_external_llm_use.txt"
+          ],
+          "top_sources": [
+            "security_and_external_llm_use.txt",
+            "mentoring_and_communication.txt",
+            "research_ethics_and_data_governance.txt",
+            "compute_and_lab_access.txt",
+            "eligibility_and_selection.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "security-002",
+          "scenario": "answerable",
+          "question": "Where should API keys and access tokens be stored?",
+          "expected_sources": [
+            "security_and_external_llm_use.txt"
+          ],
+          "top_sources": [
+            "security_and_external_llm_use.txt",
+            "compute_and_lab_access.txt",
+            "research_ethics_and_data_governance.txt",
+            "stipend_and_expenses.txt",
+            "internship_handbook.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "security-003",
+          "scenario": "answerable",
+          "question": "How quickly must an exposed repository secret be reported?",
+          "expected_sources": [
+            "security_and_external_llm_use.txt"
+          ],
+          "top_sources": [
+            "security_and_external_llm_use.txt",
+            "publication_ip_and_open_source.txt",
+            "research_ethics_and_data_governance.txt",
+            "mentoring_and_communication.txt",
+            "rag_architecture_and_evaluation.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "compute-001",
+          "scenario": "answerable",
+          "question": "What weekly GPU allocation does each internship team receive?",
+          "expected_sources": [
+            "compute_and_lab_access.txt"
+          ],
+          "top_sources": [
+            "compute_and_lab_access.txt",
+            "internship_handbook.txt",
+            "milestones_and_assessment.txt",
+            "rag_architecture_and_evaluation.txt",
+            "publication_ip_and_open_source.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "compute-002",
+          "scenario": "answerable",
+          "question": "How much encrypted project storage is allocated to a team?",
+          "expected_sources": [
+            "compute_and_lab_access.txt"
+          ],
+          "top_sources": [
+            "compute_and_lab_access.txt",
+            "research_ethics_and_data_governance.txt",
+            "mentoring_and_communication.txt",
+            "publication_ip_and_open_source.txt",
+            "internship_handbook.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "publication-001",
+          "scenario": "answerable",
+          "question": "How long does the Research Office have for internal disclosure review?",
+          "expected_sources": [
+            "publication_ip_and_open_source.txt"
+          ],
+          "top_sources": [
+            "publication_ip_and_open_source.txt",
+            "research_ethics_and_data_governance.txt",
+            "mentoring_and_communication.txt",
+            "internship_handbook.txt",
+            "eligibility_and_selection.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "publication-002",
+          "scenario": "answerable",
+          "question": "Which open-source licence should normally be used for internship source code?",
+          "expected_sources": [
+            "publication_ip_and_open_source.txt"
+          ],
+          "top_sources": [
+            "publication_ip_and_open_source.txt",
+            "archived_2025_faq.txt",
+            "internship_handbook.txt",
+            "research_ethics_and_data_governance.txt",
+            "work_schedule_and_leave.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "mentoring-001",
+          "scenario": "answerable",
+          "question": "How often should an intern have a one-to-one meeting with a mentor?",
+          "expected_sources": [
+            "mentoring_and_communication.txt"
+          ],
+          "top_sources": [
+            "mentoring_and_communication.txt",
+            "work_schedule_and_leave.txt",
+            "internship_handbook.txt",
+            "stipend_and_expenses.txt",
+            "eligibility_and_selection.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "mentoring-002",
+          "scenario": "answerable",
+          "question": "What should an intern do if the day-to-day mentor has not answered a routine blocker for two working days?",
+          "expected_sources": [
+            "mentoring_and_communication.txt"
+          ],
+          "top_sources": [
+            "mentoring_and_communication.txt",
+            "work_schedule_and_leave.txt",
+            "internship_handbook.txt",
+            "compute_and_lab_access.txt",
+            "security_and_external_llm_use.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "rag-eval-001",
+          "scenario": "answerable",
+          "question": "Which retrieval configurations are mandatory in the project comparison?",
+          "expected_sources": [
+            "rag_architecture_and_evaluation.txt"
+          ],
+          "top_sources": [
+            "rag_architecture_and_evaluation.txt",
+            "rag_background.txt",
+            "research_ethics_and_data_governance.txt",
+            "archived_2025_faq.txt",
+            "milestones_and_assessment.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "rag-eval-002",
+          "scenario": "answerable",
+          "question": "Which source-level retrieval metrics must the benchmark report?",
+          "expected_sources": [
+            "rag_architecture_and_evaluation.txt"
+          ],
+          "top_sources": [
+            "rag_architecture_and_evaluation.txt",
+            "rag_background.txt",
+            "research_ethics_and_data_governance.txt",
+            "publication_ip_and_open_source.txt",
+            "security_and_external_llm_use.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "rag-eval-003",
+          "scenario": "answerable",
+          "question": "What chunk size, overlap, top-k, embedding dimension, and seed define the official baseline?",
+          "expected_sources": [
+            "rag_architecture_and_evaluation.txt"
+          ],
+          "top_sources": [
+            "rag_architecture_and_evaluation.txt",
+            "milestones_and_assessment.txt",
+            "publication_ip_and_open_source.txt",
+            "eligibility_and_selection.txt",
+            "compute_and_lab_access.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "ambiguous-001",
+          "scenario": "ambiguous",
+          "question": "When is the report due?",
+          "expected_sources": [
+            "milestones_and_assessment.txt"
+          ],
+          "top_sources": [
+            "milestones_and_assessment.txt",
+            "internship_handbook.txt",
+            "publication_ip_and_open_source.txt",
+            "security_and_external_llm_use.txt",
+            "rag_architecture_and_evaluation.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "ambiguous-002",
+          "scenario": "ambiguous",
+          "question": "What is the deadline for reporting an incident?",
+          "expected_sources": [
+            "research_ethics_and_data_governance.txt",
+            "security_and_external_llm_use.txt"
+          ],
+          "top_sources": [
+            "research_ethics_and_data_governance.txt",
+            "mentoring_and_communication.txt",
+            "security_and_external_llm_use.txt",
+            "rag_architecture_and_evaluation.txt",
+            "compute_and_lab_access.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 0.9197,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "ambiguous-003",
+          "scenario": "ambiguous",
+          "question": "Can project data be shared in the chat workspace?",
+          "expected_sources": [
+            "mentoring_and_communication.txt",
+            "security_and_external_llm_use.txt"
+          ],
+          "top_sources": [
+            "mentoring_and_communication.txt",
+            "security_and_external_llm_use.txt",
+            "compute_and_lab_access.txt",
+            "research_ethics_and_data_governance.txt",
+            "publication_ip_and_open_source.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "conflict-001",
+          "scenario": "conflicting",
+          "question": "One document says the stipend is INR 35,000 and another says INR 45,000. Which amount applies in 2026?",
+          "expected_sources": [
+            "archived_2025_faq.txt",
+            "stipend_and_expenses.txt"
+          ],
+          "top_sources": [
+            "archived_2025_faq.txt",
+            "stipend_and_expenses.txt",
+            "internship_handbook.txt",
+            "eligibility_and_selection.txt",
+            "work_schedule_and_leave.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "conflict-002",
+          "scenario": "conflicting",
+          "question": "Is the current internship 35 or 40 hours per week?",
+          "expected_sources": [
+            "archived_2025_faq.txt",
+            "work_schedule_and_leave.txt"
+          ],
+          "top_sources": [
+            "archived_2025_faq.txt",
+            "work_schedule_and_leave.txt",
+            "internship_handbook.txt",
+            "compute_and_lab_access.txt",
+            "stipend_and_expenses.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_k": 1.0,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "conflict-003",
+          "scenario": "conflicting",
+          "question": "Does the 2026 programme end on 8 August or 21 August?",
+          "expected_sources": [
+            "archived_2025_faq.txt",
+            "internship_handbook.txt"
+          ],
+          "top_sources": [
+            "work_schedule_and_leave.txt",
+            "internship_handbook.txt",
+            "milestones_and_assessment.txt",
+            "publication_ip_and_open_source.txt",
+            "archived_2025_faq.txt"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 0.5,
+          "ndcg_at_k": 0.6241,
+          "abstained": false,
+          "abstention_correct": null
+        },
+        {
+          "id": "unanswerable-001",
+          "scenario": "unanswerable",
+          "question": "Which cafeteria meal plan is assigned to interns?",
+          "expected_sources": [],
+          "top_sources": [
+            "internship_handbook.txt",
+            "work_schedule_and_leave.txt",
+            "milestones_and_assessment.txt",
+            "archived_2025_faq.txt",
+            "compute_and_lab_access.txt"
+          ],
+          "recall_at_k": null,
+          "reciprocal_rank": null,
+          "ndcg_at_k": null,
+          "abstained": false,
+          "abstention_correct": false
+        },
+        {
+          "id": "unanswerable-002",
+          "scenario": "unanswerable",
+          "question": "What health-insurance policy number is issued to each intern?",
+          "expected_sources": [],
+          "top_sources": [
+            "stipend_and_expenses.txt",
+            "internship_handbook.txt",
+            "mentoring_and_communication.txt",
+            "work_schedule_and_leave.txt",
+            "milestones_and_assessment.txt"
+          ],
+          "recall_at_k": null,
+          "reciprocal_rank": null,
+          "ndcg_at_k": null,
+          "abstained": false,
+          "abstention_correct": false
+        },
+        {
+          "id": "unanswerable-003",
+          "scenario": "unanswerable",
+          "question": "Does the university sponsor an employment visa after the internship?",
+          "expected_sources": [],
+          "top_sources": [
+            "publication_ip_and_open_source.txt",
+            "stipend_and_expenses.txt",
+            "internship_handbook.txt",
+            "compute_and_lab_access.txt",
+            "eligibility_and_selection.txt"
+          ],
+          "recall_at_k": null,
+          "reciprocal_rank": null,
+          "ndcg_at_k": null,
+          "abstained": false,
+          "abstention_correct": false
+        },
+        {
+          "id": "unanswerable-004",
+          "scenario": "unanswerable",
+          "question": "What parking permit colour should interns request?",
+          "expected_sources": [],
+          "top_sources": [
+            "compute_and_lab_access.txt",
+            "work_schedule_and_leave.txt",
+            "archived_2025_faq.txt",
+            "stipend_and_expenses.txt",
+            "eligibility_and_selection.txt"
+          ],
+          "recall_at_k": null,
+          "reciprocal_rank": null,
+          "ndcg_at_k": null,
+          "abstained": false,
+          "abstention_correct": false
+        },
+        {
+          "id": "unanswerable-005",
+          "scenario": "unanswerable",
+          "question": "How many qubits are available on the university quantum computer?",
+          "expected_sources": [],
+          "top_sources": [
+            "eligibility_and_selection.txt",
+            "compute_and_lab_access.txt",
+            "archived_2025_faq.txt",
+            "security_and_external_llm_use.txt",
+            "internship_handbook.txt"
+          ],
+          "recall_at_k": null,
+          "reciprocal_rank": null,
+          "ndcg_at_k": null,
+          "abstained": false,
+          "abstention_correct": false
+        }
+      ]
+    }
+  ],
+  "winner": "keyword_only"
+}
